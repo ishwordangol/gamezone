@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.text-stroke {
+  color: white;
+  text-shadow: -1px -1px 0 #ff4c61, 1px -1px 0 #ff4c61, -1px 1px 0 #ff4c61,
+    1px 1px 0 #ff4c61;
+  letter-spacing: 2px;
+}
+
+.text-stroke-gray {
+  color: #f9fafb;
+}
+
+.btn {
+  @apply py-2 px-6 rounded-lg;
+}
+
+.btn-primary {
+  @apply bg-primary text-white;
+}
+
+.btn-primary:hover {
+  @apply bg-secondary;
+}
+
+/* checkbox */
+
+input[type="checkbox"] {
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+  margin: 0 0.6em 0 0;
+  outline: 0;
+  padding: 0 !important;
+  vertical-align: text-top;
+  height: 16px;
+  width: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  opacity: 0.8;
+}
+
+input[type="checkbox"]:hover {
+  opacity: 1;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #000;
+  opacity: 1;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* slick slider */
+
+.ProductSlider .slick-slide {
+  padding: 0 8px;
+}
+.ProductSlider .slick-list {
+  margin: 0 -8px;
+}
+
+.icon-triangle {
+  position: absolute;
+  right: 23.5%;
+  top: 132px;
+  height: 85px;
+  animation: rotate-animation 10s infinite linear;
+}
+
+.icon-circle {
+  position: absolute;
+  right: 17%;
+  top: 58%;
+  height: 90px;
+  animation: rotate-animation 10s infinite linear;
+}
+
+.icon-diagonal {
+  position: absolute;
+  left: 14%;
+  top: 72%;
+  height: 80px;
+  animation: rotate-animation 10s infinite linear;
+}
+
+.icon-inclined-cross {
+  position: absolute;
+  left: 16%;
+  top: 32%;
+  height: 70px;
+  animation: rotate-animation 10s infinite linear;
+}
+
+@keyframes rotate-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.srchshadow {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+.tag button.active {
+  @apply bg-primary text-white;
+}
+
+/* navigation section */
+
+nav > a:first-child,
+.srchshadow {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+nav > a:last-child,
+.srchshadow {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+nav > a:last-child {
+  border-right: none;
+}
+
+nav > a:hover h4 {
+  @apply bg-primary text-white;
+}
+
+nav > a:hover .nav-icon {
+  display: none;
+}
+
+nav a .nav-text {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all linear 0.2s;
+}
+
+nav > a:hover .nav-text {
+  display: inline-flex;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+/* footer */
+
+.widget ul li {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+}
+
+.widget ul li:before {
+  position: absolute;
+  content: "-";
+  left: 0;
+  top: 50%;
+  font-weight: bold;
+  color: rgb(156, 163, 175);
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 768px) {
+  nav > a:hover .nav-icon {
+    display: block;
+  }
+
+  nav.srchshadow {
+    box-shadow: none;
+  }
+  nav > a:first-child {
+    border-radius: 0;
+  }
+
+  nav > a:last-child {
+    border-radius: 0;
+  }
+
+  nav a .nav-text {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: all linear 0.2s;
+  }
+
+  nav > a:hover .nav-text {
+    display: inline-block;
+  }
+
+  nav > a:hover h4 {
+    @apply bg-transparent text-black;
+  }
+
+  .nav-elements {
+    position: fixed;
+    background-color: rgb(0 0 0 / 24%);
+    left: 0;
+    top: 0px;
+    width: 0px;
+    height: 100vh;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+  }
+
+  .nav-elements.active {
+    width: 100%;
+  }
+  .nav-elements nav {
+    height: 100vh;
+  }
+
+  .nav-elements.false .close-icon {
+    display: none;
+  }
+}
