@@ -24,12 +24,12 @@ export default function Home() {
       <Header />
       <section>
         <div className='relative'>
-          <img src="../../../assets/images/banner/banner1.jpg" alt="Banner 1" className='main-banner h-[80vh] w-full object-cover' />
+          <img src="./gamezone/assets/images/banner/banner1.jpg" alt="Banner 1" className='main-banner h-[80vh] w-full object-cover' />
           <div className='images-icon'>
-            <img src="../../../assets/images/banner/triangle-right.png" alt="triangle" className='icon-triangle' />
-            <img src="../../../assets/images/banner/circle.png" alt="circle" className='icon-circle animate-ping' />
-            <img src="../../../assets/images/banner/diagonal.png" alt="diagonal" className='icon-diagonal' />
-            <img src="../../../assets/images/banner/inclined-cross.png" alt="inclined-cross" className='icon-inclined-cross' />
+            <img src="./gamezone/assets/images/banner/triangle-right.png" alt="triangle" className='icon-triangle' />
+            <img src="./gamezone/assets/images/banner/circle.png" alt="circle" className='icon-circle animate-ping' />
+            <img src="./gamezone/assets/images/banner/diagonal.png" alt="diagonal" className='icon-diagonal' />
+            <img src="./gamezone/assets/images/banner/inclined-cross.png" alt="inclined-cross" className='icon-inclined-cross' />
           </div>
           <div className='container bannerDescription absolute left-1/2 top-1/2 -translate-y-1/2 md:top-1/3 -translate-x-1/2 md:-translate-y-1/3'>
             <h1 data-aos="fade-down" data-aos-offset="40" className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-secondary text-center'>

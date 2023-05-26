@@ -1,61 +1,61 @@
 [
         {
-            "src":"../../../assets/images/products/featured/sony-ps5.jpg",
+            "src":"./gamezone/assets/images/products/featured/sony-ps5.jpg",
             "alt":"Sony PS5",
             "title":"Sony PS5 Disc Japan",
             "price":"AED 1700",
             "location": "Uptown, Mirdif",
-            "userImg": "../../../assets/images/users/ishwor.jpg",
+            "userImg": "./gamezone/assets/images/users/ishwor.jpg",
             "Useralt": "Ishwor Dangol"
         },
 
         {
-            "src":"../../../assets/images/products/featured/sony-ps5.jpg",
+            "src":"./gamezone/assets/images/products/featured/sony-ps5.jpg",
             "alt":"Sony PS5",
             "title":"Sony PS5 Disc Japan",
             "price":"AED 1700",
             "location": "Uptown, Mirdif",
-            "userImg": "../../../assets/images/users/ishwor.jpg",
+            "userImg": "./gamezone/assets/images/users/ishwor.jpg",
             "Useralt": "Ishwor Dangol"
         },
 
         {
-            "src":"../../../assets/images/products/featured/sony-ps5.jpg",
+            "src":"./gamezone/assets/images/products/featured/sony-ps5.jpg",
             "alt":"Sony PS5",
             "title":"Sony PS5 Disc Japan",
             "price":"AED 1700",
             "location": "Uptown, Mirdif",
-            "userImg": "../../../assets/images/users/ishwor.jpg",
+            "userImg": "./gamezone/assets/images/users/ishwor.jpg",
             "Useralt": "Ishwor Dangol"
         },
 
         {
-            "src":"../../../assets/images/products/featured/sony-ps5.jpg",
+            "src":"./gamezone/assets/images/products/featured/sony-ps5.jpg",
             "alt":"Sony PS5",
             "title":"Sony PS5 Disc Japan",
             "price":"AED 1700",
             "location": "Uptown, Mirdif",
-            "userImg": "../../../assets/images/users/ishwor.jpg",
+            "userImg": "./gamezone/assets/images/users/ishwor.jpg",
             "Useralt": "Ishwor Dangol"
         },
 
         {
-            "src":"../../../assets/images/products/featured/sony-ps5.jpg",
+            "src":"./gamezone/assets/images/products/featured/sony-ps5.jpg",
             "alt":"Sony PS5",
             "title":"Sony PS5 Disc Japan",
             "price":"AED 1700",
             "location": "Uptown, Mirdif",
-            "userImg": "../../../assets/images/users/ishwor.jpg",
+            "userImg": "./gamezone/assets/images/users/ishwor.jpg",
             "Useralt": "Ishwor Dangol"
         },
 
         {
-            "src":"../../../assets/images/products/featured/sony-ps5.jpg",
+            "src":"./gamezone/assets/images/products/featured/sony-ps5.jpg",
             "alt":"Sony PS5",
             "title":"Sony PS5 Disc Japan",
             "price":"AED 1700",
             "location": "Uptown, Mirdif",
-            "userImg": "../../../assets/images/users/ishwor.jpg",
+            "userImg": "./gamezone/assets/images/users/ishwor.jpg",
             "Useralt": "Ishwor Dangol"
         }
 

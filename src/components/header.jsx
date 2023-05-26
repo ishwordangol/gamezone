@@ -51,8 +51,8 @@ export default function Header(props) {
             <img
               src={
                 scroll
-                  ? "../../../assets/logo-white.png"
-                  : "../../../assets/logo.png"
+                  ? "./gamezone/assets/logo-white.png"
+                  : "./gamezone/assets/logo.png"
               }
               alt="GameZone Logo"
               className="h-16 md:h-auto"

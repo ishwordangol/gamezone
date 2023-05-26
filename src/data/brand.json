@@ -1,60 +1,60 @@
 [
     {
-        "src": "../../../assets/images/brands/sony.png",
+        "src": "./gamezone/assets/images/brands/sony.png",
         "alt": ""
     },
 
     {
-        "src": "../../../assets/images/brands/microsoft.png",
+        "src": "./gamezone/assets/images/brands/microsoft.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/republic.png",
+        "src": "./gamezone/assets/images/brands/republic.png",
         "alt": ""
     },
 
     {
-        "src": "../../../assets/images/brands/amd.png",
+        "src": "./gamezone/assets/images/brands/amd.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/nvidia.png",
+        "src": "./gamezone/assets/images/brands/nvidia.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/alienware.png",
+        "src": "./gamezone/assets/images/brands/alienware.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/msi.png",
+        "src": "./gamezone/assets/images/brands/msi.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/razer.png",
+        "src": "./gamezone/assets/images/brands/razer.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/asus.png",
+        "src": "./gamezone/assets/images/brands/asus.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/samsung.png",
+        "src": "./gamezone/assets/images/brands/samsung.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/intel.png",
+        "src": "./gamezone/assets/images/brands/intel.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/hyper.png",
+        "src": "./gamezone/assets/images/brands/hyper.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/predator.png",
+        "src": "./gamezone/assets/images/brands/predator.png",
         "alt": ""
     },
     {
-        "src": "../../../assets/images/brands/armaggedon.png",
+        "src": "./gamezone/assets/images/brands/armaggedon.png",
         "alt": ""
     }
     
