@@ -238,9 +238,6 @@ nav > a:hover .nav-text {
   .nav-elements.active {
     width: 100%;
   }
-  .nav-elements nav {
-    height: 100vh;
-  }
 
   .nav-elements.false .close-icon {
     display: none;
