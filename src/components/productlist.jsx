@@ -71,7 +71,7 @@ const Productlist = ({ productdata }) => {
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="h-40 lg:h-64 w-full object-cover ease-in duration-300 hover:scale-[1.05]"
+                  className="h-auto sm:h-64 w-full object-cover ease-in duration-300 hover:scale-[1.05]"
                 />
               </Link>
               <div className="relative px-4 pt-4 pb-8">
