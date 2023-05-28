@@ -229,9 +229,9 @@ const footer = () => {
           </div>
         </div>
       </div>
-      <div className="copywrite pb-12 sm:pb-24 lg:pb-48">
+      <div className="copywrite pb-4 sm:pb-6">
         <div className="container">
-          <div className="pt-6 flex border-t">
+          <div className="pt-4 sm:pt-6 flex border-t">
             <p className="text-sm text-gray-400">
               Copyright © All Rights reserved | Gaming ZONE
             </p>

@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Nav from "../components/navbar";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { GrClose } from "react-icons/gr";
 
 export default function Header(props) {
   const [scroll, setScroll] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(false);
 
-  const handleShowNavbar = () => {
-    setShowNavbar(!showNavbar);
-  };
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 50);
@@ -27,27 +20,6 @@ export default function Header(props) {
       <div className="container">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <div className="block md:hidden mr-2" onClick={handleShowNavbar}>
-              <GiHamburgerMenu
-                size={24}
-                className={scroll ? "text-white" : ""}
-              />
-            </div>
-            <div
-              className={`w-0 block md:hidden fixed left-0 top-0 bg-white h-screen nav-elements  ${
-                showNavbar && "active"
-              }`}
-            >
-              <div className="w-72 h-screen bg-white overflow-auto">
-                <Nav />
-              </div>
-              <div
-                className="close-icon fixed top-12 left-[310px] inline-flex items-center justify-center h-10 w-10 bg-white rounded-full md:hidden"
-                onClick={handleShowNavbar}
-              >
-                <GrClose size={20} />
-              </div>
-            </div>
             <img
               src={
                 scroll

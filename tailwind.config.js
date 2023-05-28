@@ -23,7 +23,7 @@ module.exports = {
       },
 
       screens: {
-        'xs': '400px',
+        'xs': '480px',
         'sm': '640px',
         'md': '768px',
         'lg': '1024px',
@@ -93,6 +93,11 @@ module.exports = {
         112: '28rem',
         116: '29rem',
         120: '30rem',
+      },
+
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '6/4': '6 / 4',
       },
 
     },

@@ -63,7 +63,7 @@ const Productlist = ({ productdata }) => {
           return (
             <div
               key={idx}
-              className="relative bg-white border outline-none"
+              className="relative bg-white border outline-none aspect-[6/4]"
               data-aos="fade-up"
               data-aos-offset="200"
             >
@@ -71,7 +71,7 @@ const Productlist = ({ productdata }) => {
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="h-auto sm:h-64 w-full object-cover ease-in duration-300 hover:scale-[1.05]"
+                  className="aspect-[6/4] w-full object-cover ease-in duration-300 hover:scale-[1.05]"
                 />
               </Link>
               <div className="relative px-4 pt-4 pb-8">

@@ -24,12 +24,21 @@ export default function Home() {
       <Header />
       <section>
         <div className='relative'>
-          <img src="/gamezone/assets/images/banner/banner1.jpg" alt="Banner 1" className='main-banner h-[80vh] w-full object-cover' />
+          <img src="/gamezone/assets/images/sliderbanner/banner1.jpg" alt="Banner 1" className='main-banner h-[80vh] md:h-[768px] w-full object-cover' />
           <div className='images-icon'>
-            <img src="/gamezone/assets/images/banner/triangle-right.png" alt="triangle" className='icon-triangle' />
-            <img src="/gamezone/assets/images/banner/circle.png" alt="circle" className='icon-circle animate-ping' />
-            <img src="/gamezone/assets/images/banner/diagonal.png" alt="diagonal" className='icon-diagonal' />
-            <img src="/gamezone/assets/images/banner/inclined-cross.png" alt="inclined-cross" className='icon-inclined-cross' />
+            <img src="/gamezone/assets/images/sliderbanner/triangle-right.png" alt="triangle" className='icon-triangle h-[50px] md:h-[60px] lg:h-[70px] :xl:h-[85px]' />
+            <div className='relative icon-circle'>
+              <img src="/gamezone/assets/images/sliderbanner/circle.png" alt="circle" className='icon-circle-img h-[50px] md:h-[60px] lg:h-[70px] :xl:h-[90px]' />
+              <div className='absolute top-4'>
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-300 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-gray-300"></span>
+                </span>
+              </div>
+            </div>
+
+            <img src="/gamezone/assets/images/sliderbanner/diagonal.png" alt="diagonal" className='icon-diagonal h-[50px] md:h-[60px] lg:h-[70px] :xl:h-[80px]' />
+            <img src="/gamezone/assets/images/sliderbanner/inclined-cross.png" alt="inclined-cross" className='icon-inclined-cross h-[50px] md:h-[60px] lg:h-[70px] :xl:h-[70px]' />
           </div>
           <div className='container bannerDescription absolute left-1/2 top-1/2 -translate-y-1/2 md:top-1/3 -translate-x-1/2 md:-translate-y-1/3'>
             <h1 data-aos="fade-down" data-aos-offset="40" className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-secondary text-center'>
@@ -54,11 +63,16 @@ export default function Home() {
             </div>
 
           </div>
-          <div className='hidden left-0 top-0 bottom-0 container md:inline-flex md:justify-center absolute md:top-[inherit] md:bottom-[68px] md:left-1/2 md:-translate-x-1/2'>
+          <div className='hidden container md:inline-flex md:justify-center absolute bottom-[68px] left-1/2 -translate-x-1/2'>
             <div className='flex md:justify-center'>
               <Nav />
             </div>
           </div>
+        </div>
+      </section>
+      <section className='block py-4 sm:py-7 lg:py-14 md:hidden'>
+        <div className='container'>
+          <Nav />
         </div>
       </section>
       <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>

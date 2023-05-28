@@ -87,7 +87,6 @@ input[type="checkbox"]:before {
   position: absolute;
   right: 23.5%;
   top: 132px;
-  height: 85px;
   animation: rotate-animation 10s infinite linear;
 }
 
@@ -95,7 +94,6 @@ input[type="checkbox"]:before {
   position: absolute;
   right: 17%;
   top: 58%;
-  height: 90px;
   animation: rotate-animation 10s infinite linear;
 }
 
@@ -103,7 +101,6 @@ input[type="checkbox"]:before {
   position: absolute;
   left: 14%;
   top: 72%;
-  height: 80px;
   animation: rotate-animation 10s infinite linear;
 }
 
@@ -111,7 +108,6 @@ input[type="checkbox"]:before {
   position: absolute;
   left: 16%;
   top: 32%;
-  height: 70px;
   animation: rotate-animation 10s infinite linear;
 }
 
@@ -194,52 +190,34 @@ nav > a:hover .nav-text {
 }
 
 @media screen and (max-width: 768px) {
-  nav > a:hover .nav-icon {
-    display: block;
-  }
-
   nav.srchshadow {
     box-shadow: none;
   }
-  nav > a:first-child {
-    border-radius: 0;
-  }
 
+  nav > a {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+  }
   nav > a:last-child {
-    border-radius: 0;
+    border-right: 1px solid #e5e7eb;
+  }
+  .icon-triangle {
+    right: 10%;
+    top: 12%;
   }
 
-  nav a .nav-text {
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    transition: all linear 0.2s;
+  .icon-circle {
+    right: 17%;
+    top: 90%;
   }
 
-  nav > a:hover .nav-text {
-    display: inline-block;
+  .icon-diagonal {
+    left: 14%;
+    top: 82%;
   }
 
-  nav > a:hover h4 {
-    @apply bg-transparent text-black;
-  }
-
-  .nav-elements {
-    position: fixed;
-    background-color: rgb(0 0 0 / 24%);
-    left: 0;
-    top: 0px;
-    width: 0px;
-    height: 100vh;
-    transition: all 0.3s ease-in;
-    overflow: hidden;
-  }
-
-  .nav-elements.active {
-    width: 100%;
-  }
-
-  .nav-elements.false .close-icon {
-    display: none;
+  .icon-inclined-cross {
+    left: 7%;
+    top: 15%;
   }
 }
