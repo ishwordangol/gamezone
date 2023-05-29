@@ -34,7 +34,7 @@ export default function Header(props) {
             <div className="flex items-center">
               <Link
                 href="/"
-                className={`block mr-2 sm:mr-4 lg:mr-8 hover:text-primary ${
+                className={`block mr-4 lg:mr-8 hover:text-primary ${
                   scroll ? "text-white" : ""
                 }`}
               >
@@ -42,7 +42,7 @@ export default function Header(props) {
               </Link>
               <Link
                 href="/"
-                className={`flex items-center mr-2 sm:mr-4 lg:mr-8 hover:text-primary ${
+                className={`flex items-center mr-4 lg:mr-8 hover:text-primary ${
                   scroll ? " text-white" : ""
                 }`}
               >

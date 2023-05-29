@@ -190,6 +190,27 @@ nav > a:hover .nav-text {
 }
 
 @media screen and (max-width: 768px) {
+  nav a .nav-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: all linear 0.2s;
+  }
+
+  nav > a:hover .nav-text {
+    display: inline-flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+
+  nav > a:hover h4 {
+    @apply bg-transparent text-black;
+  }
+
+  nav > a:hover .nav-icon {
+    display: block;
+  }
   nav.srchshadow {
     box-shadow: none;
   }

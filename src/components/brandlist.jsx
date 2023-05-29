@@ -13,7 +13,7 @@ const Brandlist = ({ branddata }) => {
   }, []);
   return (
     <>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-1 sm:gap-2 lg:gap-4">
+      <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-1 sm:gap-2 lg:gap-4">
         {branddata.map((item, idx) => {
           return (
             <Link
@@ -21,9 +21,9 @@ const Brandlist = ({ branddata }) => {
               data-aos-offset="200"
               to="#"
               key={idx}
-              className="h-42 bg-white flex items-center justify-center border hover:border-primary"
+              className="p-4 h-28 sm:h-42 bg-white flex items-center justify-center border hover:border-primary"
             >
-              <img src={item.src} alt={item.alt} key={idx} />
+              <img src={item.src} alt={item.alt} key={idx} className="h-auto" />
             </Link>
           );
         })}
