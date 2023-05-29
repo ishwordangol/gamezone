@@ -163,7 +163,7 @@ const footer = () => {
               <h2 className="text-xl font-medium">
                 Subscribe to our newsletter
               </h2>
-              <div className="flex items-center mt-6 newsletter">
+              <div className="flex items-center mt-6 newsletter bg-gray-100 rounded-full">
                 <input
                   type="search"
                   id="search"
@@ -173,7 +173,7 @@ const footer = () => {
                 />
                 <button
                   type="submit"
-                  className="flex items-center text-white text-xs uppercase px-4 py-4 bg-primary rounded-none rounded-tr-full rounded-br-full hover:bg-secondary transition duration-500 ease-in-out"
+                  className="flex items-center text-white text-xs uppercase px-4 py-4 bg-primary rounded-tl-none rounded-bl-none rounded-tr-full rounded-br-full hover:bg-secondary transition duration-500 ease-in-out"
                 >
                   Subscribe
                 </button>
