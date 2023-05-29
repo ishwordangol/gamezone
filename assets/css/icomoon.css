@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-gaming-system:before {
+  content: "\e904";
+}
 .icon-cd:before {
   content: "\e900";
 }
