@@ -19,7 +19,7 @@ export default function Header(props) {
     >
       <div className="container">
         <div className="flex justify-between items-center">
-          <div className="flex items-center">
+          <Link className="flex items-center" to="/gamezone">
             <img
               src={
                 scroll
@@ -29,7 +29,7 @@ export default function Header(props) {
               alt="GameZone Logo"
               className="h-16 md:h-auto"
             />
-          </div>
+          </Link>
           <nav>
             <div className="flex items-center">
               <Link
@@ -38,7 +38,7 @@ export default function Header(props) {
                   scroll ? "text-white" : ""
                 }`}
               >
-                <span class="icon-notification text-xl"></span>
+                <span className="icon-notification text-xl"></span>
               </Link>
               <Link
                 href="/"
@@ -46,7 +46,7 @@ export default function Header(props) {
                   scroll ? " text-white" : ""
                 }`}
               >
-                <span class="icon-user text-xl"></span>
+                <span className="icon-user text-xl"></span>
                 <span className="hidden sm:block ml-2 lg:ml-3 text-sm">
                   Login/ Signup
                 </span>

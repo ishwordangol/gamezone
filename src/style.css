@@ -18,6 +18,11 @@ body {
   color: #f9fafb;
 }
 
+.boxShadowcustom {
+  -webkit-box-shadow: 0 1px 4px 0 rgba(24, 26, 32, 0.07);
+  box-shadow: 0 1px 4px 0 rgba(24, 26, 32, 0.07);
+}
+
 .btn {
   @apply py-2 px-6 rounded-lg;
 }
@@ -35,7 +40,7 @@ body {
 input[type="checkbox"] {
   position: relative;
   border: 1px solid #000;
-  border-radius: 0;
+  border-radius: 4px;
   background: none;
   cursor: pointer;
   line-height: 0;
@@ -72,6 +77,14 @@ input[type="checkbox"]:before {
   margin: -1px -1px 0 -1px;
   transform: rotate(45deg) translate(-50%, -50%);
   z-index: 2;
+}
+
+.btn-toggle:hover .icon-toggleSlide {
+  @apply bg-primary text-white;
+}
+
+.btn-toggle:hover .toggletext {
+  @apply text-primary;
 }
 
 /* slick slider */
@@ -187,6 +200,18 @@ nav > a:hover .nav-text {
   font-weight: bold;
   color: rgb(156, 163, 175);
   transform: translateY(-50%);
+}
+
+/* detail slider */
+
+.imageGallery_Wrapper .image-gallery-thumbnail.imagegallery_thumbnail {
+  border: none;
+  opacity: 0.8;
+}
+
+.imageGallery_Wrapper .image-gallery-thumbnail.imagegallery_thumbnail.active,
+.imageGallery_Wrapper .image-gallery-thumbnail.imagegallery_thumbnail:hover {
+  opacity: 1;
 }
 
 @media screen and (max-width: 768px) {

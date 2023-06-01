@@ -67,7 +67,10 @@ const Productlist = ({ productdata }) => {
               data-aos="fade-up"
               data-aos-offset="200"
             >
-              <Link to="#" className="block overflow-hidden">
+              <Link
+                to="/gamezone/product-detail"
+                className="block overflow-hidden"
+              >
                 <img
                   src={item.src}
                   alt={item.alt}
@@ -83,7 +86,10 @@ const Productlist = ({ productdata }) => {
                   />
                 </div>
                 <h1 className="text-lg text-primary uppercase">{item.price}</h1>
-                <Link to="#" className="hover:text-primary">
+                <Link
+                  to="/gamezone/product-detail"
+                  className="hover:text-primary"
+                >
                   <h2 className="text-sm font-medium">{item.title}</h2>
                 </Link>
                 <div className="mt-2 flex items-center opacity-50">

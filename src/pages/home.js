@@ -5,7 +5,7 @@ import Header from '../components/header';
 import { TypeAnimation } from 'react-type-animation';
 import Footer from '../components/footer';
 import Search from "../components/search";
-import Featured from '../components/productlist';
+import Featured from '../components/productlistslider';
 import featuredslides from '../data/featuredproductdata.json';
 import Brand from '../components/brandlist';
 import brands from '../data/brand.json';
@@ -30,9 +30,9 @@ export default function Home() {
             <div className='relative icon-circle'>
               <img src="/gamezone/assets/images/sliderbanner/circle.png" alt="circle" className='icon-circle-img h-[50px] md:h-[60px] lg:h-[70px] :xl:h-[90px]' />
               <div className='absolute top-4'>
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-300 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-gray-300"></span>
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gray-300 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-gray-300"></span>
                 </span>
               </div>
             </div>
