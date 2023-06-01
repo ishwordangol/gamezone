@@ -214,6 +214,10 @@ nav > a:hover .nav-text {
   opacity: 1;
 }
 
+.imageGallery_Wrapper .image-gallery-icon:hover {
+  @apply text-primary;
+}
+
 @media screen and (max-width: 768px) {
   nav a .nav-text {
     opacity: 1;
