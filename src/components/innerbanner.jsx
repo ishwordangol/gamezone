@@ -7,7 +7,7 @@ const breadcrumb = () => {
       <img
         src="/gamezone/assets/inner-bg.jpg"
         alt="Banner 1"
-        className="md:h-[400px] w-full object-cover"
+        className="h-[150px] md:h-[400px] w-full object-cover"
       />
       <div className="images-icon">
         <img

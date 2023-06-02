@@ -19,6 +19,7 @@ import {
 } from "react-share";
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { RiShareFill, RiPhoneFill, RiWhatsappFill } from "react-icons/ri";
+import { BiMap } from "react-icons/bi";
 
 export const Productdetail = () => {
     const images = [
@@ -206,54 +207,73 @@ export const Productdetail = () => {
                             Lorem Ipsum.
                         </p>
                     </div>
-                    <div className="detailsWrapper mt-8 border bg-gray-50 p-4 text-sm">
-                        <h1 className="text-lg md:text-xl lg:text-2xl font-semibold mb-4">
-                            Details
-                        </h1>
+                    <div className="grid grid-cols-2 gap-4">
+                        <div className="detailsWrapper mt-8 border bg-gray-50 p-4 text-sm">
+                            <h1 className="text-lg md:text-xl lg:text-2xl font-semibold mb-4">
+                                Details
+                            </h1>
 
-                        <div className="grid grid-cols-3 gap-2">
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">CPU :</span>
-                                <span className="col-span-2">3.5GHz, 8-core AMD Zen 2</span>
-                            </div>
+                            <div className="grid grid-cols-2 gap-2">
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">CPU :</span>
+                                    <span className="col-span-2">3.5GHz, 8-core AMD Zen 2</span>
+                                </div>
 
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">GPU :</span>
-                                <span className="col-span-2">10.3 teraflop RDNA 2 GPU</span>
-                            </div>
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">GPU :</span>
+                                    <span className="col-span-2">10.3 teraflop RDNA 2 GPU</span>
+                                </div>
 
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">RAM :</span>
-                                <span className="col-span-2">16GB GDDR6</span>
-                            </div>
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">RAM :</span>
+                                    <span className="col-span-2">16GB GDDR6</span>
+                                </div>
 
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">Storage :</span>
-                                <span className="col-span-2">Custom 825GB SSD</span>
-                            </div>
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">Storage :</span>
+                                    <span className="col-span-2">Custom 825GB SSD</span>
+                                </div>
 
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">Expansion :</span>
-                                <span className="col-span-2">NVMe M.2 SSD slot</span>
-                            </div>
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">Expansion :</span>
+                                    <span className="col-span-2">NVMe M.2 SSD slot</span>
+                                </div>
 
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">Disc drive :</span>
-                                <span className="col-span-2">4K Blu-ray player</span>
-                            </div>
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">Disc drive :</span>
+                                    <span className="col-span-2">4K Blu-ray player</span>
+                                </div>
 
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">Size :</span>
-                                <span className="col-span-2">15.4 x 10.2 x 4.1 inches</span>
-                            </div>
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">Size :</span>
+                                    <span className="col-span-2">15.4 x 10.2 x 4.1 inches</span>
+                                </div>
 
-                            <div className="grid grid-cols-3 gap-1">
-                                <span className="font-semibold">Weight :</span>
-                                <span className="col-span-2">9.9 pounds</span>
+                                <div className="grid grid-cols-3 gap-1">
+                                    <span className="font-semibold">Weight :</span>
+                                    <span className="col-span-2">9.9 pounds</span>
+                                </div>
+
                             </div>
 
                         </div>
+                        <div className="detailsWrapper mt-8 border bg-gray-50 p-4 text-sm">
+                            <div className="flex justify-between mb-4">
+                                <h1 className="text-lg md:text-xl lg:text-2xl font-semibold">
+                                    Location
+                                </h1>
+                                <div className="flex items-center">
+                                    <BiMap className="mr-2" />
+                                    <h4 className="text-xs">Uptown, Mirdif</h4>
+                                </div>
+                            </div>
+                            <div>
+                                <iframe title="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.417392482696!2d55.422812576137304!3d25.222862930659304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f60bd056c0629%3A0x516a8dda17b672e9!2sUptown%20Mirdiff%20Mall!5e0!3m2!1sen!2snp!4v1685681785652!5m2!1sen!2snp" width="100%" height="200" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
 
+
+
+                        </div>
                     </div>
                 </div>
             </section >
