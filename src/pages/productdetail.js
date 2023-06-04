@@ -21,7 +21,7 @@ import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { SiSony } from "react-icons/si";
 import { BiMap, BiMailSend, BiPhoneCall } from "react-icons/bi";
 
-export const Productdetail = ({ embedId }) => {
+export const Productdetail = () => {
 
     const YoutubeEmbed = ({ embedId }) => (
         <div className="video-responsive">
@@ -101,7 +101,7 @@ export const Productdetail = ({ embedId }) => {
                 <div className="container">
                     <div
                         className={` flex items-center justify-between ${scroll
-                            ? "bg-gray-50 z-[45] sticky top-[130px] py-4"
+                            ? "bg-gray-50 z-[45] sticky top-[130px] py-4 pr-4"
                             : ""
                             }`}>
                         <div className="w-full">
@@ -130,12 +130,16 @@ export const Productdetail = ({ embedId }) => {
                                     </WhatsappShareButton>
                                 </div>
                             </div>
-                            <div className="flex items-center mt-2">
-                                <h2 className="text-lg md:text-xl font-bold text-primary">
+                            <div className="flex items-center justify-between mt-2">
+                                <div className="flex items-center">
+                                    <span className="text-sm">200 Views</span>
+
+                                    <span className="px-4 text-gray-300">|</span>
+                                    <span className="text-sm">added 2 days ago</span>
+                                </div>
+                                <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">
                                     AED 330
                                 </h2>
-                                <span className="px-4 text-gray-300">|</span>
-                                <span className="text-sm">added 2 days ago</span>
                             </div>
                         </div>
 
