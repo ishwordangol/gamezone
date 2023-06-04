@@ -19,6 +19,7 @@ module.exports = {
         linkedin: '#0678B6',
         google: '#e34133',
         pininterest: '#B7081B',
+        whatsapp: '#1AD03F',
 
       },
 

@@ -87,6 +87,18 @@ input[type="checkbox"]:before {
   @apply text-primary;
 }
 
+/* header homepage */
+
+.homepageWrapper .header_wrapper,
+.categoryWrapper .header_wrapper {
+  position: fixed;
+  top: 0;
+}
+
+.homepageWrapper .header_wrapper .headerbottom {
+  display: none;
+}
+
 /* slick slider */
 
 .ProductSlider .slick-slide {
@@ -94,6 +106,30 @@ input[type="checkbox"]:before {
 }
 .ProductSlider .slick-list {
   margin: 0 -8px;
+}
+
+.detailfeaturedWrapper .slick-dots li {
+  margin: 0;
+}
+
+.detailfeaturedWrapper .slick-dots li.slick-active button:before,
+.detailfeaturedWrapper .slick-dots li button:hover:before,
+.detailfeaturedWrapper .slick-dots li button:focus:before {
+  @apply text-primary opacity-100;
+}
+
+.detailfeaturedWrapper .slick-prev,
+.detailfeaturedWrapper .slick-next {
+  z-index: 99;
+  margin-top: -60px;
+}
+
+.detailfeaturedWrapper .slick-prev {
+  left: 15px;
+}
+
+.detailfeaturedWrapper .slick-next {
+  right: 15px;
 }
 
 .icon-triangle {

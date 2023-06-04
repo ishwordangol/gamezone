@@ -3,11 +3,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from '../components/header';
 import Footer from '../components/footer';
+// import Mainmenu from '../components/mainmenu';
 import ProductGrid from '../components/productlistgrid';
 import categorylistingproduct from '../data/categoryproductlisting.json';
-import Innerbanner from '../components/innerbanner';
+// import Innerbanner from '../components/innerbanner';
 import { Link } from "react-router-dom";
-import Nav from '../components/navbar';
+import Search from "../components/search";
+// import Nav from '../components/navbar';
 import ReactSelect from "../components/Reactselect";
 import { CiSliderVertical } from "react-icons/ci";
 import { TbZoomReset, TbStar } from "react-icons/tb";
@@ -52,16 +54,22 @@ export const CategoryProductlisting = () => {
     }, []);
     return (
         <>
-            <Header />
-            <Innerbanner />
-            <section className='block py-4 sm:py-7 lg:py-14 md:hidden'>
-                <div className='container'>
-                    <Nav />
+            <div className='categoryWrapper'>
+                <Header />
+            </div>
+
+            <section className='relative'>
+                <img src="/gamezone/assets/inner-bg.jpg" alt="Innerbanner" className='md:h-[300px] w-full object-cover' />
+                <div className='container absolute left-1/2 -translate-x-1/2 bottom-[50px]'>
+                    <div className='flex justify-center'>
+                        <Search />
+                    </div>
                 </div>
             </section>
+
             <section className='pt-4 sm:pt-7 bg-gray-50'>
                 <div className='container'>
-                    <div className='breadcrumb'>
+                    <div className='breadcrumb mb-7'>
                         <h2 className='text-2xl md:text-3xl font-semibold text-secondary'>Video Games</h2>
                         <div className='flex mt-2'>
                             <Link to="/gamezone" className='text-sm hover:text-primary'>Home</Link>
@@ -69,17 +77,61 @@ export const CategoryProductlisting = () => {
                             <span className='text-sm'>Video Games</span>
                         </div>
                     </div>
+
+                    <div className='p-8 bg-white'>
+                        <h3 className='text-xl font-semibold block mb-4'>Video Games - <span className='text-primary'>400 Ads</span></h3>
+                        <div className='flex flex-wrap gap-2'>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone1</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone1</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone Areas</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone Section</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone1</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone1</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone1</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4'>GameZone1</h2>
+                                <h2 className='font-bold'>50</h2>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </section>
+
+
             <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>
                 <div className='container'>
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-16'>
                         <div className='bg-white shadow-lg p-8'>
-                            <div className="relative w-full mb-4">
-                                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                    <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path></svg>
+                            <h3 className="text-xl font-semibold mb-2 block">Filters</h3>
+                            <div className='mb-4'>
+                                <label className="font-semibold mb-2 block">Keywords</label>
+                                <div className="relative w-full">
+                                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                        <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path></svg>
+                                    </div>
+                                    <input type="text" id="simple-search" className="bg-gray-100 text-gray-700 text-sm rounded-lg block w-full pl-10 p-2.5 outline-none" placeholder="Search your keyword" required />
                                 </div>
-                                <input type="text" id="simple-search" className="bg-gray-100 text-gray-700 text-sm rounded-lg block w-full pl-10 p-2.5 outline-none" placeholder="Search your keyword" required />
                             </div>
                             <div className='mb-4'>
                                 <ReactSelect options={cities} label="City" placeholder="Select Cities" />

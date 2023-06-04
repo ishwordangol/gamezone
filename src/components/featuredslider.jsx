@@ -1,25 +1,41 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { BiMap } from "react-icons/bi";
 
-const Productlist = ({ productdata }) => {
+const Featuredslider = ({ productdata }) => {
   useEffect(() => {
     AOS.init({
+      offset: 120,
       duration: 1200,
     });
     AOS.refresh();
   }, []);
 
+  const settings = {
+    dots: false,
+    // centerMode: true,
+    // centerPadding: "16px",
+    infinite: true,
+    // autoplay: true,
+    arrows: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <>
-      <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+      <Slider {...settings} className="FeaturedSlider">
         {productdata.map((item, idx) => {
           return (
             <div
               key={idx}
               className="relative bg-white border outline-none aspect-[6/4]"
+              data-aos="fade-up"
             >
               <Link
                 to="/gamezone/product-detail"
@@ -62,14 +78,14 @@ const Productlist = ({ productdata }) => {
             </div>
           );
         })}
-      </div>
+      </Slider>
       <div className="mt-4 sm:mt-7 lg:mt-14 flex justify-center">
         <button className="btn btn-primary transition duration-500 ease-in-out">
-          Load More
+          View all listing
         </button>
       </div>
     </>
   );
 };
 
-export default Productlist;
+export default Featuredslider;

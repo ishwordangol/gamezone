@@ -64,7 +64,7 @@ function Reactselect({ label, options, placeholder, isSearchable }) {
           borderRadius: 0,
           colors: {
             ...theme.colors,
-            primary25: "rgb(249 75 96 / 10%)",
+            primary25: "rgb(243, 244, 246)",
             primary: "#ff4159",
           },
         })}

@@ -65,7 +65,6 @@ const Productlist = ({ productdata }) => {
               key={idx}
               className="relative bg-white border outline-none aspect-[6/4]"
               data-aos="fade-up"
-              data-aos-offset="200"
             >
               <Link
                 to="/gamezone/product-detail"
