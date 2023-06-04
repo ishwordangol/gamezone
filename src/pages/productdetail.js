@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "../components/header";
@@ -21,7 +21,21 @@ import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { SiSony } from "react-icons/si";
 import { BiMap, BiMailSend, BiPhoneCall } from "react-icons/bi";
 
-export const Productdetail = () => {
+export const Productdetail = ({ embedId }) => {
+
+    const YoutubeEmbed = ({ embedId }) => (
+        <div className="video-responsive">
+            <iframe
+                width="853"
+                height="480"
+                src={`https://www.youtube.com/embed/${embedId}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                title="Embedded youtube"
+            />
+        </div>
+    );
     const images = [
         {
             original: "/gamezone/assets/images/products/original/product1.jpg",
@@ -56,24 +70,45 @@ export const Productdetail = () => {
     ];
 
     const [isOpen, setIsOpen] = useState(false);
+    const [scroll, setScroll] = useState(false);
+    const refContainer = useRef();
+    const [dimensions, setDimensions] =
+        useState({ height: 0 });
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         document.title = "Product Detail";
         AOS.init({
             offset: 120,
             duration: 1200,
         });
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 50);
+        });
+        if (refContainer.current) {
+            setDimensions({
+                height: refContainer.current.offsetHeight,
+            });
+        }
+
     }, []);
     return (
         <>
-            <Header />
+            <div ref={refContainer}>
+                <Header />
+            </div>
             <section className="py-4 sm:py-7 lg:py-14 bg-gray-50">
                 <div className="container">
-                    <div className="flex items-center justify-between">
+                    <div
+                        className={` flex items-center justify-between ${scroll
+                            ? "bg-gray-50 z-[45] sticky top-[130px] py-4"
+                            : ""
+                            }`}>
                         <div className="w-full">
                             <div className="flex items-center justify-between">
                                 <h2 className="flex-1 text-2xl md:text-3xl font-semibold text-secondary">
                                     Sony PS5 Disc Japan
+
                                 </h2>
                                 <div className="flex items-center">
                                     <span className="mr-2 text-sm">Share:</span>
@@ -125,7 +160,7 @@ export const Productdetail = () => {
                                 </div>
                             </div>
                             <div className="mt-4 bg-white p-4 bg-shadow">
-                                <h4 class="text-lg font-semibold mb-4 block text-secondary">Details</h4>
+                                <h4 className="text-lg font-semibold mb-4 block text-secondary">Details</h4>
                                 <div className="flex flex-wrap items-center gap-4">
                                     <div className="flex items-center ">
                                         <SiSony className="text-5xl mr-4 p-2 border rounded-lg"></SiSony>
@@ -179,7 +214,7 @@ export const Productdetail = () => {
                                 </div>
                             </div>
                             <div className="overviewWrapper bg-white mt-4 p-4 text-sm bg-shadow">
-                                <h4 class="text-lg font-semibold mb-2 block text-secondary">Overview</h4>
+                                <h4 className="text-lg font-semibold mb-2 block text-secondary">Overview</h4>
                                 <p>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting
                                     industry. Lorem Ipsum has been the industry's standard dummy text
@@ -191,7 +226,7 @@ export const Productdetail = () => {
                                 <Link to="#" className="block underline font-bold mt-2">Show More</Link>
                             </div>
                             <div className="detailsWrapper mt-4 bg-white bg-shadow p-4 text-sm">
-                                <h4 class="text-lg font-semibold mb-4 block text-secondary">Specifications</h4>
+                                <h4 className="text-lg font-semibold mb-4 block text-secondary">Specifications</h4>
                                 <div className="grid grid-cols-2 gap-1">
                                     <div className="grid grid-cols-3 gap-">
                                         <span className="font-semibold">CPU :</span>
@@ -272,8 +307,8 @@ export const Productdetail = () => {
                             </div>
 
                             <div className="youtube-video mt-4 bg-white p-4 bg-shadow">
-                                <h4 class="text-lg font-semibold mb-2 block text-secondary">Video</h4>
-                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/p_ykcr2ZaKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                <h4 className="text-lg font-semibold mb-2 block text-secondary">Video</h4>
+                                <YoutubeEmbed embedId="p_ykcr2ZaKo" />
                             </div>
 
 

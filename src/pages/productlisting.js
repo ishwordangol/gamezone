@@ -46,6 +46,7 @@ export const CategoryProductlisting = () => {
     ]
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         document.title = 'Category Product list';
         AOS.init({
             offset: 120,

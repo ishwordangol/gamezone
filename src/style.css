@@ -120,7 +120,7 @@ input[type="checkbox"]:before {
 
 .detailfeaturedWrapper .slick-prev,
 .detailfeaturedWrapper .slick-next {
-  z-index: 99;
+  z-index: 40;
   margin-top: -60px;
 }
 
@@ -252,6 +252,23 @@ nav > a:hover .nav-text {
 
 .imageGallery_Wrapper .image-gallery-icon:hover {
   @apply text-primary;
+}
+
+/* youtube video */
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 @media screen and (max-width: 768px) {

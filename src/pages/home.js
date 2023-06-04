@@ -14,6 +14,8 @@ import Nav from '../components/navbar';
 
 export default function Home() {
   useEffect(() => {
+    document.title = 'Homepage';
+    window.scrollTo(0, 0);
     AOS.init({
       offset: 120,
       duration: 1200,
