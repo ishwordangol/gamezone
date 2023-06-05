@@ -34,15 +34,13 @@ const InnerpageSearch = () => {
           </div>
 
           <div className="w-full lg:w-auto flex-1 rounded-lg lg:rounded-none lg:border-r">
-            <div className="relative">
-              <input
-                type="search"
-                id="search"
-                className="rounded-lg lg:rounded-none bg-gray-100 lg:bg-transparent w-full py-2 px-8 text-sm text-black outline-none placeholder-black"
-                placeholder="Search anything.."
-                required
-              />
-            </div>
+            <input
+              type="search"
+              id="search"
+              className="rounded-lg lg:rounded-none bg-gray-100 lg:bg-transparent w-full py-2 px-8 text-sm text-black outline-none placeholder-black"
+              placeholder="Search anything.."
+              required
+            />
           </div>
           <div className="w-full lg:w-auto flex items-center searchdropdown relative lg:mr-8">
             <ReactSelect options={areas} placeholder="Select Areas" />
