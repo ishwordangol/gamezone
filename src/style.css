@@ -87,6 +87,13 @@ input[type="checkbox"]:before {
   @apply text-primary;
 }
 
+/* drawer */
+
+.drawerRight {
+  width: 320px !important;
+  overflow-y: auto;
+}
+
 /* header homepage */
 
 .homepageWrapper .header_wrapper,
@@ -97,6 +104,11 @@ input[type="checkbox"]:before {
 
 .homepageWrapper .header_wrapper .headerbottom {
   display: none;
+}
+
+.ProductdetailWrapper .header_wrapper {
+  position: relative;
+  animation-name: none;
 }
 
 /* slick slider */

@@ -14,7 +14,9 @@ export const Categorypage = () => {
             <Header />
             <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>
                 <div className='container'>
-                    <Categorylist />
+                    <div className='max-w-3xl mx-auto'>
+                        <Categorylist />
+                    </div>
                 </div>
             </section>
             <Footer />
