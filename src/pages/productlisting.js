@@ -51,7 +51,7 @@ export const CategoryProductlisting = () => {
                 </div>
             </section>
 
-            <section className='pt-4 sm:pt-7 bg-gray-50'>
+            <section className='pt-4 sm:pt-7 bg-gray-100'>
                 <div className='container'>
                     <div className='breadcrumb mb-7'>
                         <h2 className='text-2xl md:text-3xl font-semibold text-secondary'>Video Games</h2>
@@ -88,10 +88,10 @@ export const CategoryProductlisting = () => {
             </section>
 
 
-            <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>
+            <section className='py-4 sm:py-7 lg:py-14 bg-gray-100'>
                 <div className='container'>
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-16'>
-                        <div className='bg-white shadow-lg p-8 hidden lg:block'>
+                        <div className='bg-white p-8 hidden lg:block'>
                             <h3 className="text-xl font-semibold mb-2 block">Filters</h3>
                             <AdvanceFilter />
                         </div>

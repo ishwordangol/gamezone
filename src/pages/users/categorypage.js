@@ -12,7 +12,7 @@ export const Categorypage = () => {
     return (
         <>
             <Header />
-            <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>
+            <section className='py-4 sm:py-7 lg:py-14 bg-gray-100'>
                 <div className='container'>
                     <div className='max-w-3xl mx-auto'>
                         <Categorylist />

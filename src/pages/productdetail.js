@@ -97,7 +97,7 @@ export const Productdetail = () => {
             <div className="ProductdetailWrapper">
                 <Header />
 
-                <section className="py-4 sm:py-7 bg-gray-50">
+                <section className="py-4 sm:py-7 bg-gray-100">
                     <div className="container">
                         <div
                             className={` flex items-center justify-between ${scroll
@@ -164,7 +164,7 @@ export const Productdetail = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className="mt-4 bg-white p-4 bg-shadow">
+                                <div className="mt-4 bg-white p-4">
                                     <h4 className="text-lg font-semibold mb-4 block text-secondary">Details</h4>
                                     <div className="flex flex-wrap items-center gap-4">
                                         <div className="w-full xs:w-auto flex items-center">
@@ -218,7 +218,7 @@ export const Productdetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="overviewWrapper bg-white mt-4 p-4 text-sm bg-shadow">
+                                <div className="overviewWrapper bg-white mt-4 p-4 text-sm">
                                     <h4 className="text-lg font-semibold mb-2 block text-secondary">Overview</h4>
                                     <p>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -230,7 +230,7 @@ export const Productdetail = () => {
                                     </p>
                                     <Link to="#" className="block underline font-bold mt-2">Show More</Link>
                                 </div>
-                                <div className="detailsWrapper mt-4 bg-white bg-shadow p-4 text-sm">
+                                <div className="detailsWrapper mt-4 bg-white p-4 text-sm">
                                     <h4 className="text-lg font-semibold mb-4 block text-secondary">Specifications</h4>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-1">
                                         <div className="flex flex-wrap sm:grid grid-cols-3 gap-1">
@@ -311,7 +311,7 @@ export const Productdetail = () => {
                                     </div>
                                 </div>
 
-                                <div className="youtube-video mt-4 bg-white p-4 bg-shadow">
+                                <div className="youtube-video mt-4 bg-white p-4">
                                     <h4 className="text-lg font-semibold mb-2 block text-secondary">Video</h4>
                                     <YoutubeEmbed embedId="p_ykcr2ZaKo" />
                                 </div>
@@ -320,7 +320,7 @@ export const Productdetail = () => {
 
                             </div>
                             <div className="right_section">
-                                <div className="bg-white p-4 shadow-lg">
+                                <div className="bg-white p-4">
                                     <h4 className="text-lg font-semibold mb-4 block text-secondary">Contact Detail</h4>
                                     <div className="mt-4 flex pb-4 border-b">
                                         <Link to="#">
@@ -381,7 +381,7 @@ export const Productdetail = () => {
                                         WhatsApp
                                     </button>
                                 </div>
-                                <div className="mt-4 bg-white p-4 shadow-lg">
+                                <div className="mt-4 bg-white p-4">
                                     <h4 className="text-lg font-semibold mb-4 block text-secondary">Featured Products</h4>
                                     <div className="detailfeaturedWrapper">
                                         <FeaturedsliderDetail productdata={featuredslides} />
