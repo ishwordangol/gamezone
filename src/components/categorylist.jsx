@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Categorylist = () => {
   return (
-    <div className="grid grid-cols-4 gap-8">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8">
       <Link
         to="/gamezone/user/categoryforms"
         className="bg-white category-link hover:shadow-lg"

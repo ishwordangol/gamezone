@@ -33,7 +33,7 @@ const InnerpageSearch = () => {
             <ReactSelect options={categories} placeholder="All Categories" />
           </div>
 
-          <div className="w-full lg:w-auto flex-1 lg:border-r">
+          <div className="w-full lg:w-auto flex-1 rounded-lg lg:rounded-none lg:border-r">
             <div className="relative">
               <input
                 type="search"
@@ -49,7 +49,7 @@ const InnerpageSearch = () => {
           </div>
           <button
             type="submit"
-            className="mt-2 w-full lg:w-auto justify-center lg:mt-0 lg:justify-normal flex items-center text-white btn btn-primary text-sm px-4 py-2 transition duration-500 ease-in-out"
+            className="mt-1 w-full lg:w-auto justify-center lg:mt-0 lg:justify-normal flex items-center text-white btn btn-primary text-sm px-4 py-2 transition duration-500 ease-in-out"
           >
             <svg
               aria-hidden="true"

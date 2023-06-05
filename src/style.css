@@ -375,4 +375,8 @@ nav > a:hover .nav-text {
     left: 7%;
     top: 15%;
   }
+
+  #RFS-StepperContainer {
+    @apply px-2;
+  }
 }

@@ -46,7 +46,7 @@ export const Categoryforms = () => {
             <Header />
             <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>
                 <div className='container'>
-                    <div className='bg-white p-8 max-w-xl mx-auto'>
+                    <div className='bg-white p-4 lg:p-8 max-w-xl mx-auto'>
                         <h2 className='text-2xl md:text-3xl font-semibold text-secondary'>Gaming System</h2>
                         <Stepper styleConfig={stepStyleConfig} activeStep={activeStep}>
                             <Step label="Basic Details" />
