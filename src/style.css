@@ -271,6 +271,12 @@ nav > a:hover .nav-text {
   position: absolute;
 }
 
+/* category page */
+
+.category-link:hover h4 {
+  @apply text-primary;
+}
+
 @media screen and (max-width: 768px) {
   nav a .nav-text {
     opacity: 1;

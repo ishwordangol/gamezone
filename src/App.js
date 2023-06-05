@@ -3,6 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import { CategoryProductlisting } from './pages/productlisting';
 import { Productdetail } from './pages/productdetail';
+import { Categorypage } from './pages/users/categorypage';
+import { Categoryforms } from './pages/users/categorybasicforms';
+
 function App() {
   return (
     <>
@@ -11,6 +14,8 @@ function App() {
           <Route path="/gamezone" element={<Home />} />
           <Route path="/gamezone/category-product-listing" element={<CategoryProductlisting />} />
           <Route path="/gamezone/product-detail" element={<Productdetail />} />
+          <Route path="/gamezone/user/catgorypage" element={<Categorypage />} />
+          <Route path="/gamezone/user/categoryforms" element={<Categoryforms />} />
         </Routes>
       </div>
     </>

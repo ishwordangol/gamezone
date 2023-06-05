@@ -71,9 +71,9 @@ export const Productdetail = () => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [scroll, setScroll] = useState(false);
-    const refContainer = useRef();
-    const [dimensions, setDimensions] =
-        useState({ height: 0 });
+    // const refContainer = useRef();
+    // const [dimensions, setDimensions] =
+    //     useState({ height: 0 });
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -85,23 +85,23 @@ export const Productdetail = () => {
         window.addEventListener("scroll", () => {
             setScroll(window.scrollY > 50);
         });
-        if (refContainer.current) {
-            setDimensions({
-                height: refContainer.current.offsetHeight,
-            });
-        }
+        // if (refContainer.current) {
+        //     setDimensions({
+        //         height: refContainer.current.offsetHeight,
+        //     });
+        // }
 
     }, []);
     return (
         <>
-            <div ref={refContainer}>
-                <Header />
-            </div>
+            {/* <div ref={refContainer}> */}
+            <Header />
+            {/* </div> */}
             <section className="py-4 sm:py-7 lg:py-14 bg-gray-50">
                 <div className="container">
                     <div
                         className={` flex items-center justify-between ${scroll
-                            ? "bg-gray-50 z-[45] sticky top-[130px] py-4 pr-4"
+                            ? "bg-gray-50 z-[45] sticky top-[130px] py-4 pr-4 animate__animated animate__fadeInDown"
                             : ""
                             }`}>
                         <div className="w-full">

@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Mainmenu from "../components/mainmenu";
 
 export default function Header() {
   const [scroll, setScroll] = useState(false);
+  const navigate = useNavigate();
+
+  const navigateToCategoryPage = () => {
+    // 👇️ navigate to /categorypage
+    navigate("/gamezone/user/catgorypage");
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -53,7 +59,10 @@ export default function Header() {
                     Login/ Signup
                   </span>
                 </Link>
-                <button className="btn btn-primary transition duration-500 ease-in-out">
+                <button
+                  className="btn btn-primary transition duration-500 ease-in-out"
+                  onClick={navigateToCategoryPage}
+                >
                   Post your Ads
                 </button>
               </div>
