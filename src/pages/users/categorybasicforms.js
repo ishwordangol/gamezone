@@ -3,6 +3,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import { Stepper, Step } from "react-form-stepper";
 import ReactSelect from "../../components/Reactselect";
+import DropZone from "../../components/imageupload";
 
 export const Categoryforms = () => {
     const [selected, setSelected] = useState('AMD');
@@ -50,7 +51,7 @@ export const Categoryforms = () => {
                         <h2 className='text-2xl md:text-3xl font-semibold text-secondary'>Gaming System</h2>
                         <Stepper styleConfig={stepStyleConfig} activeStep={activeStep}>
                             <Step label="Basic Details" />
-                            <Step label="Specifications" />
+                            <Step label="Additional Informations" />
                         </Stepper>
                         {activeStep === 0 &&
                             <div className='formWrapper'>
@@ -103,6 +104,11 @@ export const Categoryforms = () => {
                                 <div className='form-group mb-4'>
                                     <label className='font-semibold mb-2 block'>Price</label>
                                     <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Price" required /></div>
+                                </div>
+
+                                <div className='form-group mb-4'>
+                                    <DropZone label="Upload" className="border border-dashed rounded-lg p-8 hover:border-primary hover:text-primary cursor-pointer" />
+
                                 </div>
 
                             </div>}
