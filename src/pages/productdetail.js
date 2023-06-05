@@ -130,16 +130,16 @@ export const Productdetail = () => {
                                     </WhatsappShareButton>
                                 </div>
                             </div>
-                            <div className="flex items-center justify-between mt-2">
+                            <div className="flex items-center justify-between">
                                 <div className="flex items-center">
-                                    <span className="text-sm">200 Views</span>
+                                    <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">
+                                        AED 330
+                                    </h2>
 
                                     <span className="px-4 text-gray-300">|</span>
                                     <span className="text-sm">added 2 days ago</span>
                                 </div>
-                                <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">
-                                    AED 330
-                                </h2>
+
                             </div>
                         </div>
 
@@ -341,7 +341,7 @@ export const Productdetail = () => {
                                             <span className="mr-2">+561 12 *** *</span>
                                             <button className="px-2 py-0.5 bg-secondary hover:bg-primary text-white" onClick={() => setIsOpen(!isOpen)}>Show</button>
                                         </div>
-                                        <Link to="mailto:info@gamezone.com" className="inline-flex items-center text-sm"><BiMailSend className="mr-2" />info@gamezone.com</Link>
+                                        {/* <Link to="mailto:info@gamezone.com" className="inline-flex items-center text-sm"><BiMailSend className="mr-2" />info@gamezone.com</Link> */}
                                         <Link to="#" className="flex items-center text-sm hover:underline"><BiMap className="mr-2" />Uptown, Mirdif</Link>
                                     </div>
                                 </div>
@@ -350,7 +350,7 @@ export const Productdetail = () => {
                                     <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
 
                                 </div>
-                                <div className='mt-4'>
+                                {/* <div className='mt-4'>
                                     <label className='font-semibold mb-2 block'>Address</label>
                                     <div><input type="text" id="address" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
 
@@ -359,7 +359,7 @@ export const Productdetail = () => {
                                     <label className='font-semibold mb-2 block'>Email</label>
                                     <div><input type="text" id="email" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
 
-                                </div>
+                                </div> */}
                                 <div className='mt-4'>
                                     <label className='font-semibold mb-2 block'>Phone</label>
                                     <div><input type="number" id="phone" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>

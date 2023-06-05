@@ -70,7 +70,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="headerbottom py-2 border-t bg-white shadow">
+      <div className="headerbottom py-2 border-t border-b bg-white">
         <div className="container">
           <div>
             <Mainmenu />

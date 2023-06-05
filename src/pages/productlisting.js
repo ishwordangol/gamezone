@@ -55,13 +55,10 @@ export const CategoryProductlisting = () => {
     }, []);
     return (
         <>
-            <div className='categoryWrapper'>
-                <Header />
-            </div>
+            <Header />
 
-            <section className='relative'>
-                <img src="/gamezone/assets/inner-bg.jpg" alt="Innerbanner" className='md:h-[300px] w-full object-cover' />
-                <div className='container absolute left-1/2 -translate-x-1/2 bottom-[50px]'>
+            <section className='py-4 sm:py-7'>
+                <div className='container'>
                     <div className='flex justify-center'>
                         <Search />
                     </div>
@@ -79,41 +76,26 @@ export const CategoryProductlisting = () => {
                         </div>
                     </div>
 
-                    <div className='p-8 bg-white'>
-                        <h3 className='text-xl font-semibold block mb-4'>Video Games - <span className='text-primary'>400 Ads</span></h3>
+                    <div>
+                        {/* <h3 className='text-xl font-semibold block mb-4'>Video Games - <span className='text-primary'>400 Ads</span></h3> */}
                         <div className='flex flex-wrap gap-2'>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone1</h2>
-                                <h2 className='font-bold'>50</h2>
+                            <Link className='flex justify-between items-center py-0.5 px-4 bg-white border rounded-full whitespace-nowrap hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4 text-sm'>GameZone1</h2>
+                                <h2 className='font-bold text-sm'>50Ads</h2>
                             </Link>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone1</h2>
-                                <h2 className='font-bold'>50</h2>
+                            <Link className='flex justify-between items-center py-0.5 px-4 bg-white border rounded-full whitespace-nowrap hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4 text-sm'>GameZone1</h2>
+                                <h2 className='font-bold text-sm'>50Ads</h2>
                             </Link>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone Areas</h2>
-                                <h2 className='font-bold'>50</h2>
+                            <Link className='flex justify-between items-center py-0.5 px-4 bg-white border rounded-full whitespace-nowrap hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4 text-sm'>GameZone Areas</h2>
+                                <h2 className='font-bold text-sm'>50Ads</h2>
                             </Link>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone Section</h2>
-                                <h2 className='font-bold'>50</h2>
+                            <Link className='flex justify-between items-center py-0.5 px-4 bg-white border rounded-full whitespace-nowrap hover:bg-primary hover:text-white hover:border-primary'>
+                                <h2 className='mr-4 text-sm'>GameZone Section</h2>
+                                <h2 className='font-bold text-sm'>50Ads</h2>
                             </Link>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone1</h2>
-                                <h2 className='font-bold'>50</h2>
-                            </Link>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone1</h2>
-                                <h2 className='font-bold'>50</h2>
-                            </Link>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone1</h2>
-                                <h2 className='font-bold'>50</h2>
-                            </Link>
-                            <Link className='flex justify-between items-center py-2 px-4 bg-white border rounded-full hover:bg-primary hover:text-white hover:border-primary'>
-                                <h2 className='mr-4'>GameZone1</h2>
-                                <h2 className='font-bold'>50</h2>
-                            </Link>
+
                         </div>
                     </div>
                 </div>
