@@ -236,6 +236,25 @@ nav > a:hover .nav-text {
   transform: translateY(0px);
 }
 
+/* search */
+
+.searchdropdown .reactSelect .react-selectprefixs__control {
+  @apply bg-transparent w-56;
+}
+
+.searchdropdown .reactSelect .react-selectprefixs__placeholder,
+.Sortingselect .reactSelect .react-selectprefixs__placeholder {
+  @apply text-black;
+}
+
+.searchdropdown .reactSelect .react-selectprefixs__value-container {
+  @apply py-2 pl-10;
+}
+
+.Sortingselect .reactSelect .react-selectprefixs__control {
+  @apply bg-white;
+}
+
 /* footer */
 
 .widget ul li {
@@ -291,6 +310,17 @@ nav > a:hover .nav-text {
 
 .category-link:hover h4 {
   @apply text-primary;
+}
+
+@media screen and (max-width: 1024px) {
+  .searchdropdown .reactSelect .react-selectprefixs__control,
+  .searchdropdown > div {
+    @apply bg-gray-100 w-full rounded-lg;
+  }
+
+  .searchdropdown .reactSelect .react-selectprefixs__value-container {
+    @apply pl-8;
+  }
 }
 
 @media screen and (max-width: 768px) {

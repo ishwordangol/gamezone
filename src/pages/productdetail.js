@@ -101,7 +101,7 @@ export const Productdetail = () => {
                     <div className="container">
                         <div
                             className={` flex items-center justify-between ${scroll
-                                ? "bg-gray-50 z-[45] sticky top-0 py-2 pr-4 animate__animated animate__fadeInDown"
+                                ? "bg-gray-50 z-[45] sticky top-0 py-2 pr-4"
                                 : ""
                                 }`}>
                             <div className="w-full">

@@ -5,7 +5,7 @@ const search = () => {
     <div className="w-full lg:max-w-[800px]">
       <label
         htmlFor="search"
-        className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+        className="mb-2 text-sm font-medium text-gray-900 sr-only"
       >
         Search
       </label>

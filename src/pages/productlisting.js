@@ -8,13 +8,13 @@ import ProductGrid from '../components/productlistgrid';
 import categorylistingproduct from '../data/categoryproductlisting.json';
 // import Innerbanner from '../components/innerbanner';
 import { Link } from "react-router-dom";
-import Search from "../components/search";
+import InnerpageSearch from "../components/innerpagesearch";
 import AdvanceFilter from "../components/advancesearch";
 // import Nav from '../components/navbar';
 import ReactSelect from "../components/Reactselect";
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
-import { BsFilterCircle } from "react-icons/bs";
+import { BsFillFilterCircleFill } from "react-icons/bs";
 
 export const CategoryProductlisting = () => {
     const [isOpen, setIsOpen] = React.useState(false)
@@ -46,7 +46,7 @@ export const CategoryProductlisting = () => {
             <section className='py-4 sm:py-7'>
                 <div className='container'>
                     <div className='flex justify-center'>
-                        <Search />
+                        <InnerpageSearch />
                     </div>
                 </div>
             </section>
@@ -100,16 +100,16 @@ export const CategoryProductlisting = () => {
                                 <div className='flex items-center'>
                                     <button onClick={toggleDrawer} className='mr-2 block lg:hidden'>
                                         <div className='flex items-center'>
-                                            <BsFilterCircle />
-                                            <span className='px-2'>Filter</span>
+                                            <BsFillFilterCircleFill className='text-xl text-secondary' />
+                                            <span className='px-1 text-sm lg:text-base'>Filter</span>
                                         </div>
                                     </button>
 
-                                    <p className="">12 results found</p>
+                                    <p className="hidden xs:block text-sm lg:text-base">12 results found</p>
                                 </div>
                                 <div className='flex items-center'>
-                                    <span className='mr-2'>Sort By: </span>
-                                    <div className='min-w-[180px]'>
+                                    <span className='mr-2 text-sm lg:text-base'>Sort By: </span>
+                                    <div className='w-auto sm:min-w-[180px] Sortingselect'>
                                         <ReactSelect options={sorting} placeholder="Default" isSearchable={false} label={null} />
                                     </div>
                                 </div>

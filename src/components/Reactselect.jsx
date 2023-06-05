@@ -59,6 +59,7 @@ function Reactselect({ label, options, placeholder, isSearchable }) {
         placeholder={placeholder}
         className="reactSelect"
         isSearchable={isSearchable}
+        classNamePrefix="react-selectprefixs"
         theme={(theme) => ({
           ...theme,
           borderRadius: 0,
