@@ -87,6 +87,10 @@ input[type="checkbox"]:before {
   @apply text-primary;
 }
 
+.formWrapper .radio-button[aria-hidden="true"] {
+  display: none;
+}
+
 /* drawer */
 
 .drawerRight {

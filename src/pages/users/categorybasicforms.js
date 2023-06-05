@@ -5,13 +5,18 @@ import { Stepper, Step } from "react-form-stepper";
 import ReactSelect from "../../components/Reactselect";
 
 export const Categoryforms = () => {
-
+    const [selected, setSelected] = useState('AMD');
     const [activeStep, setActiveStep] = useState(0);
     const handleNextStep = () => activeStep <= 1 ? setActiveStep(activeStep + 1) : "";
     const handleBackStep = () => activeStep >= 1 ? setActiveStep(activeStep - 1) : "";
     const stepStyleConfig = {
         activeBgColor: "#ff4159",
         completedBgColor: "#00ee99"
+    };
+
+
+    const changeHandler = e => {
+        setSelected(e.target.value);
     };
 
     const conditons = [
@@ -101,15 +106,141 @@ export const Categoryforms = () => {
                                 </div>
 
                             </div>}
-                        {activeStep === 1 ? <h1>step two</h1> : ""}
+                        {activeStep === 1 && <div className='formWrapper'>
+                            <div className='flex items-center w-full'>
+                                <input
+                                    type="radio"
+                                    name="gender"
+                                    value="AMD"
+                                    id="AMD"
+                                    checked={selected === "AMD"}
+                                    onChange={changeHandler}
+                                />
+                                <label htmlFor="AMD" className='ml-2'>AMD</label>
+                            </div>
+
+                            <div className='flex items-center w-full'>
+                                <input
+                                    type="radio"
+                                    value="Intel"
+                                    id="Intel"
+                                    checked={selected === "Intel"}
+                                    name="Intel"
+                                    onChange={changeHandler}
+                                />
+                                <label htmlFor="Intel" className='ml-2'>Intel</label>
+                            </div>
+                            <div className='mt-4'>
+                                <div className="radio-button" aria-hidden={selected !== "AMD" ? true : false}>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="CPU"
+                                            placeholder="Select CPU"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Motherboard"
+                                            placeholder="Select Motherboard"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Memory"
+                                            placeholder="Select Memory"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Storage"
+                                            placeholder="Select Storage"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Video Card"
+                                            placeholder="Select Video Card"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Power Supply"
+                                            placeholder="Select Power Supply"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Case"
+                                            placeholder="Select Case"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Operating System"
+                                            placeholder="Select Operating System"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="radio-button" aria-hidden={selected !== "Intel" ? true : false}>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="CPU"
+                                            placeholder="Select CPU"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Motherboard"
+                                            placeholder="Select Motherboard"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Memory"
+                                            placeholder="Select Memory"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Storage"
+                                            placeholder="Select Storage"
+                                        />
+                                    </div>
+                                    <div className='form-group mb-4'>
+                                        <ReactSelect
+                                            options={cities}
+                                            label="Video Card"
+                                            placeholder="Select Video Card"
+                                        />
+                                    </div>
+                                </div>
+                            </div></div>}
 
                         <div className='flex flex-wrap items-center justify-end'>
-                            <button className="btn bg-gray-300 text-white transition duration-500 ease-in-out mr-2" onClick={handleBackStep}>
-                                Back
-                            </button>
-                            <button className="btn btn-primary transition duration-500 ease-in-out" onClick={handleNextStep}>
+                            {activeStep === 0 && <button className="btn btn-primary transition duration-500 ease-in-out" onClick={handleNextStep}>
                                 Next
-                            </button>
+                            </button>}
+                            {activeStep === 1 && <>
+                                <button className="btn bg-gray-300 text-white transition duration-500 ease-in-out mr-2 hover:bg-secondary" onClick={handleBackStep}>
+                                    Back
+                                </button>
+                                <button className="btn btn-primary transition duration-500 ease-in-out">
+                                    Save
+                                </button>
+                            </>
+                            }
                         </div>
                     </div>
 
