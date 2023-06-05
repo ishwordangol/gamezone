@@ -110,6 +110,17 @@ export const Productdetail = () => {
                                     Sony PS5 Disc Japan
 
                                 </h2>
+
+                            </div>
+                            <div className="flex items-center justify-between">
+                                <div className="flex items-center">
+                                    <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">
+                                        AED 330
+                                    </h2>
+
+                                    <span className="px-4 text-gray-300">|</span>
+                                    <span className="text-sm">added 2 days ago</span>
+                                </div>
                                 <div className="flex items-center">
                                     <span className="mr-2 text-sm">Share:</span>
                                     <FacebookShareButton url={"https://www.facebook.com"}>
@@ -128,16 +139,6 @@ export const Productdetail = () => {
                                     <WhatsappShareButton url={"https://www.whatsapp.com"}>
                                         <WhatsappIcon size={32} round={true} />
                                     </WhatsappShareButton>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center">
-                                    <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">
-                                        AED 330
-                                    </h2>
-
-                                    <span className="px-4 text-gray-300">|</span>
-                                    <span className="text-sm">added 2 days ago</span>
                                 </div>
 
                             </div>
