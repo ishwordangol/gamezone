@@ -35,6 +35,14 @@ body {
   @apply bg-secondary;
 }
 
+.btn-secondary {
+  @apply bg-secondary text-white;
+}
+
+.btn-secondary:hover {
+  @apply bg-black;
+}
+
 input[type="search"] {
   -webkit-appearance: none;
 }

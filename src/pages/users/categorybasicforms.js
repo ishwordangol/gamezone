@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import { Stepper, Step } from "react-form-stepper";
@@ -7,6 +8,12 @@ import DropZone from "../../components/imageupload";
 import { RiPriceTag3Line, RiBankCard2Fill, RiAppleFill } from "react-icons/ri";
 
 export const Categoryforms = () => {
+    const navigate = useNavigate();
+
+    const navigateToCongratulationPage = () => {
+        // 👇️ navigate to /categorypage
+        navigate("/gamezone/user/congratulations");
+    };
     const [selected, setSelected] = useState('AMD');
     const [activeStep, setActiveStep] = useState(0);
     const handleNextStep = () => activeStep <= 1 ? setActiveStep(activeStep + 1) : "";
@@ -364,7 +371,7 @@ export const Categoryforms = () => {
                                 <button className="btn bg-gray-300 text-white transition duration-500 ease-in-out mr-2 hover:bg-secondary" onClick={handleBackStep}>
                                     Back
                                 </button>
-                                <button className="btn btn-primary transition duration-500 ease-in-out">
+                                <button className="btn btn-primary transition duration-500 ease-in-out" onClick={navigateToCongratulationPage}>
                                     Save
                                 </button>
                             </>
