@@ -133,7 +133,7 @@ export const Categoryforms = () => {
 
                                     <div className='col-span-full form-group'>
                                         <label className='font-semibold mb-2 block'>Descriptions</label>
-                                        <div><textarea id="message" rows="8" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
+                                        <div><textarea id="message" rows="8" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Message" required /></div>
 
                                     </div>
                                 </div>

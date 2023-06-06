@@ -6,6 +6,7 @@ import { Productdetail } from './pages/productdetail';
 import { Categorypage } from './pages/users/categorypage';
 import { Categoryforms } from './pages/users/categorybasicforms';
 import { Congratulations } from './pages/users/congratulations';
+import { Contact } from './pages/contact';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/gamezone/user/catgorypage" element={<Categorypage />} />
           <Route path="/gamezone/user/categoryforms" element={<Categoryforms />} />
           <Route path="/gamezone/user/congratulations" element={<Congratulations />} />
+          <Route path="/gamezone/contact" element={<Contact />} />
         </Routes>
       </div>
     </>

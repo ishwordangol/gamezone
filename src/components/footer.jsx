@@ -133,7 +133,7 @@ const footer = () => {
                   </li>
                   <li>
                     <Link
-                      to="#"
+                      to="/gamezone/contact"
                       className="text-sm text-gray-400 hover:text-primary hover:underline"
                     >
                       Contact us
