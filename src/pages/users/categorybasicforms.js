@@ -66,7 +66,7 @@ export const Categoryforms = () => {
                         </Stepper>
                         {activeStep === 0 &&
                             <div className='formWrapper'>
-                                <div className='grid sm:grid-cols-2 sm:gap-4'>
+                                <div className='grid sm:grid-cols-2 gap-4'>
                                     <div className='col-span-full form-group'>
                                         <label className='font-semibold mb-2 block'>Advertisement Title*</label>
                                         <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Title" required /></div>
@@ -158,7 +158,7 @@ export const Categoryforms = () => {
                             </div>
                             <div className='mt-4'>
                                 <div className="radio-button" aria-hidden={selected !== "AMD" ? true : false}>
-                                    <div className='grid sm:grid-cols-2 sm:gap-4'>
+                                    <div className='grid sm:grid-cols-2 gap-4'>
                                         <div className='form-group'>
                                             <ReactSelect
                                                 options={cities}
@@ -218,7 +218,7 @@ export const Categoryforms = () => {
                                     </div>
                                 </div>
                                 <div className="radio-button" aria-hidden={selected !== "Intel" ? true : false}>
-                                    <div className='grid sm:grid-cols-2 sm:gap-4'>
+                                    <div className='grid sm:grid-cols-2 gap-4'>
                                         <div className='form-group'>
                                             <ReactSelect
                                                 options={cities}
@@ -259,7 +259,7 @@ export const Categoryforms = () => {
                             </div></div>}
 
                         {activeStep === 2 && <div className='confirmationWrapper'>
-                            <div className='grid grid-cols-3 gap-4'>
+                            <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                                 <img src="/gamezone/assets/images/products/original/product1.jpg" alt="Product" />
                                 <div className='col-span-2'>
                                     <div>
@@ -284,9 +284,9 @@ export const Categoryforms = () => {
                                             value="yes"
                                             checked
                                         />
-                                        <label htmlFor="product-category">Listing in Website</label>
+                                        <label htmlFor="product-category" className='text-xs xs:text-sm'>Listing in Website</label>
                                     </div>
-                                    <span className='text-lg font-medium'>50.00 AED</span>
+                                    <span className='text-sm xs:text-lg font-medium'>50.00 AED</span>
                                 </div>
                                 <div className='flex items-center justify-between mb-1'>
                                     <div className="checkbox">
@@ -296,9 +296,9 @@ export const Categoryforms = () => {
                                             type="checkbox"
                                             value="yes"
                                         />
-                                        <label htmlFor="product-category">Publish as Featured Ads</label>
+                                        <label htmlFor="product-category" className='text-xs xs:text-sm'>Publish as Featured Ads</label>
                                     </div>
-                                    <span className='text-lg font-medium'>00.00 AED</span>
+                                    <span className='text-sm xs:text-lg font-medium'>00.00 AED</span>
                                 </div>
                                 <div className='flex items-center justify-between mb-1'>
                                     <div className="checkbox">
@@ -308,17 +308,17 @@ export const Categoryforms = () => {
                                             type="checkbox"
                                             value="yes"
                                         />
-                                        <label htmlFor="product-category">Publish as Urgent Ads</label>
+                                        <label htmlFor="product-category" className='text-xs xs:text-sm'>Publish as Urgent Ads</label>
                                     </div>
-                                    <span className='text-lg font-medium'>00.00 AED</span>
+                                    <span className='text-sm xs:text-lg font-medium'>00.00 AED</span>
                                 </div>
 
                                 <div className='py-1 flex items-center justify-between border-t'>
-                                    <span className='text-lg font-semibold'>Total Cost</span>
-                                    <span className='text-lg font-semibold'>50.00 AED</span>
+                                    <span className='text-base xs:text-lg font-semibold'>Total Cost</span>
+                                    <span className='text-base xs:text-lg font-semibold'>50.00 AED</span>
                                 </div>
 
-                                <div className='flex gap-2 itmes-center mt-8'>
+                                <div className='flex flex-wrap gap-2 itmes-center mt-8'>
                                     <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block p-2.5 outline-none" placeholder="Coupen code" required /></div>
                                     <button className="btn btn-primary transition duration-500 ease-in-out">
                                         Apply
@@ -326,20 +326,20 @@ export const Categoryforms = () => {
                                 </div>
 
                                 <div className='payment flex items-center gap-4 mt-8'>
-                                    <button type='button' className='w-40 h-24 bg-gray-100 p-4 rounded-lg text-secondary hover:border hover:border-primary hover:text-primary'>
+                                    <button type='button' className='w-40 h-24 bg-gray-100 p-2 xs:p-4 rounded-lg text-secondary hover:border hover:border-primary hover:text-primary'>
                                         <div className='flex flex-col justify-center'>
                                             <div className='flex justify-center'>
                                                 <RiBankCard2Fill className='text-2xl' />
                                             </div>
-                                            <p className='mt-2 text-sm font-medium'>Card payment</p>
+                                            <p className='mt-2 text-xs xs:text-sm font-medium'>Card payment</p>
                                         </div>
                                     </button>
-                                    <button type='button' className='w-40 h-24 bg-gray-100 p-4 rounded-lg text-secondary hover:border hover:border-primary hover:text-primary'>
+                                    <button type='button' className='w-40 h-24 bg-gray-100 p-2 xs:p-4 rounded-lg text-secondary hover:border hover:border-primary hover:text-primary'>
                                         <div className='flex flex-col justify-center'>
                                             <div className='flex justify-center'>
                                                 <RiAppleFill className='text-2xl' />
                                             </div>
-                                            <p className='mt-2 text-sm font-medium'>Apple Pay</p>
+                                            <p className='mt-2 text-xs xs:text-sm font-medium'>Apple Pay</p>
                                         </div>
                                     </button>
                                 </div>

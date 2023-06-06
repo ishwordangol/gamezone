@@ -384,3 +384,8 @@ nav > a:hover .nav-text {
     @apply px-2;
   }
 }
+@media screen and (max-width: 480px) {
+  #RFS-Label {
+    font-size: 12px;
+  }
+}
