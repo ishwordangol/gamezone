@@ -10,7 +10,7 @@ const Mainmenu = () => {
           <Link
             to={menu.path}
             key={index}
-            className="whitespace-nowrap font-medium mr-12 hover:text-primary"
+            className="whitespace-nowrap font-medium mr-8 xl:mr-12 hover:text-primary"
           >
             {menu.title}
           </Link>

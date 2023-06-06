@@ -42,7 +42,7 @@ export default function Header() {
               <div className="flex items-center">
                 <Link
                   href="/"
-                  className={`block mr-4 lg:mr-8 hover:text-primary ${
+                  className={`hidden lg:block mr-4 lg:mr-8 hover:text-primary ${
                     scroll ? "text-white" : ""
                   }`}
                 >
@@ -50,7 +50,7 @@ export default function Header() {
                 </Link>
                 <Link
                   href="/"
-                  className={`flex items-center mr-4 lg:mr-8 hover:text-primary ${
+                  className={`hidden lg:flex items-center mr-4 lg:mr-8 hover:text-primary ${
                     scroll ? " text-white" : ""
                   }`}
                 >
@@ -70,7 +70,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="headerbottom py-2 border-t border-b bg-white">
+      <div className="hidden lg:block headerbottom py-2 border-t border-b bg-white">
         <div className="container">
           <div>
             <Mainmenu />

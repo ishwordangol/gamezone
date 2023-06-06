@@ -6,6 +6,7 @@ import { Stepper, Step } from "react-form-stepper";
 import ReactSelect from "../../components/Reactselect";
 import DropZone from "../../components/imageupload";
 import { RiPriceTag3Line, RiBankCard2Fill, RiAppleFill } from "react-icons/ri";
+import MobileInputs from '../../components/mobileInputs';
 
 export const Categoryforms = () => {
     const navigate = useNavigate();
@@ -110,13 +111,11 @@ export const Categoryforms = () => {
                                         <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Location" required /></div>
                                     </div>
                                     <div className='form-group'>
-                                        <label className='font-semibold mb-2 block'>Contact Number</label>
-                                        <div><input type="number" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Contact number" required /></div>
+                                        <MobileInputs id="contact_number" label="Contact Number" placeholder="Enter Contact Number" />
                                     </div>
 
                                     <div className='form-group'>
-                                        <label className='font-semibold mb-2 block'>Whatapp Number</label>
-                                        <div><input type="number" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Whatsapp number" required /></div>
+                                        <MobileInputs id="whatsapp_number" label="Whatapp Number" placeholder="Enter Whatsapp Number" />
                                     </div>
 
                                     <div className='form-group'>

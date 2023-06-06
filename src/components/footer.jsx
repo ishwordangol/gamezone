@@ -6,6 +6,12 @@ import {
   FaInstagram,
   FaFacebookF,
 } from "react-icons/fa";
+import {
+  RiHome3Fill,
+  RiLayoutGridFill,
+  RiNotification2Fill,
+  RiUserFill,
+} from "react-icons/ri";
 
 const footer = () => {
   return (
@@ -235,6 +241,43 @@ const footer = () => {
             <p className="text-sm text-gray-400">
               Copyright © All Rights reserved | Gaming ZONE
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="w-full fixed bottom-0 py-2 bg-white block lg:hidden z-[99] border-t">
+        <div className="container">
+          <div className="grid grid-cols-4 gap-4">
+            <Link to="/gamezone" className="flex justify-center flex-col gap-1">
+              <span className="flex justify-center">
+                <RiHome3Fill className="inline-block text-2xl text-secondary" />
+              </span>
+              <span className="text-center inline-block text-xs">Home</span>
+            </Link>
+
+            <Link to="#" className="flex justify-center flex-col gap-1">
+              <span className="flex justify-center">
+                <RiLayoutGridFill className="inline-block text-2xl text-secondary" />
+              </span>
+              <span className="text-center inline-block text-xs">
+                Categories
+              </span>
+            </Link>
+
+            <Link to="#" className="flex justify-center flex-col gap-1">
+              <span className="flex justify-center">
+                <RiNotification2Fill className="inline-block text-2xl text-secondary" />
+              </span>
+              <span className="text-center inline-block text-xs">
+                Notification
+              </span>
+            </Link>
+
+            <Link to="#" className="flex justify-center flex-col gap-1">
+              <span className="flex justify-center">
+                <RiUserFill className="inline-block text-2xl text-secondary" />
+              </span>
+              <span className="text-center inline-block text-xs">Profile</span>
+            </Link>
           </div>
         </div>
       </div>

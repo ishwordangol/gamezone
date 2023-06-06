@@ -43,7 +43,7 @@ export const CategoryProductlisting = () => {
         <>
             <Header />
 
-            <section className='py-4 sm:py-7'>
+            <section className='border-t lg:border-t-0 py-4 sm:py-7'>
                 <div className='container'>
                     <div className='flex justify-center'>
                         <InnerpageSearch />
