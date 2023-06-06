@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import BrandItems from "./data/brand";
 
-const Brandlist = ({ branddata }) => {
+const Brandlist = () => {
   useEffect(() => {
     AOS.init({
       offset: 120,
@@ -14,7 +15,7 @@ const Brandlist = ({ branddata }) => {
   return (
     <>
       <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-1 sm:gap-2 lg:gap-4">
-        {branddata.map((item, idx) => {
+        {BrandItems.map((item, idx) => {
           return (
             <Link
               data-aos="fade-up"

@@ -26,6 +26,15 @@ export const Categoryforms = () => {
         { value: "Excellent", label: "Excellent" },
     ];
 
+    const year = [
+        { value: "2018", label: "2018" },
+        { value: "2019", label: "2019" },
+        { value: "2020", label: "2020" },
+        { value: "2021", label: "2021" },
+        { value: "2022", label: "2022" },
+        { value: "2023", label: "2023" },
+    ];
+
     const cities = [
         { value: "Dubai", label: "Dubai" },
         { value: "All Cities", label: "All Cities" },
@@ -60,11 +69,7 @@ export const Categoryforms = () => {
                                     <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Title" required /></div>
                                 </div>
 
-                                <div className='form-group mb-4'>
-                                    <label className='font-semibold mb-2 block'>Descriptions</label>
-                                    <div><textarea id="message" rows="8" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
 
-                                </div>
 
                                 <div className='form-grouo mb-4'>
                                     <ReactSelect
@@ -75,8 +80,11 @@ export const Categoryforms = () => {
                                 </div>
 
                                 <div className='form-group mb-4'>
-                                    <label className='font-semibold mb-2 block'>Purchase Year</label>
-                                    <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Purchase Year" required /></div>
+                                    <ReactSelect
+                                        options={year}
+                                        label="Purchase Year"
+                                        placeholder="Select Year"
+                                    />
                                 </div>
 
                                 <div className='form-group mb-4'>
@@ -106,8 +114,16 @@ export const Categoryforms = () => {
                                     <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Price" required /></div>
                                 </div>
 
+
+
                                 <div className='form-group mb-4'>
                                     <DropZone label="Upload" className="border border-dashed rounded-lg p-8 hover:border-primary hover:text-primary cursor-pointer" />
+
+                                </div>
+
+                                <div className='form-group mb-4'>
+                                    <label className='font-semibold mb-2 block'>Descriptions</label>
+                                    <div><textarea id="message" rows="8" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
 
                                 </div>
 

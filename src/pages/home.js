@@ -8,7 +8,6 @@ import Search from "../components/search";
 import Featured from '../components/productlistslider';
 import featuredslides from '../data/featuredproductdata.json';
 import Brand from '../components/brandlist';
-import brands from '../data/brand.json';
 import Nav from '../components/navbar';
 
 
@@ -102,7 +101,7 @@ export default function Home() {
             <h3 className='text-base md:text-lg font-extralight'>Buy & Sell Anything</h3>
           </div>
           <div className='container'>
-            <Brand branddata={brands} />
+            <Brand />
           </div>
         </section>
         <Footer />
