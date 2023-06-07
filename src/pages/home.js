@@ -8,7 +8,7 @@ import Search from "../components/search";
 import Featured from '../components/productlistslider';
 import featuredslides from '../data/featuredproductdata.json';
 import Brand from '../components/brandlist';
-import Nav from '../components/navbar';
+import Nav from '../components/navbarwithads';
 
 
 export default function Home() {

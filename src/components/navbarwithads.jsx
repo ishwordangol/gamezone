@@ -15,11 +15,11 @@ const Navbar = () => {
     >
       <Link
         to="/gamezone/category-product-listing"
-        className="p-0 bg-white justify-between inline-block md:border-r w-full md:w-[140px] xl:w-[180px]"
+        className="p-0 bg-gray-100 justify-between inline-block md:border-r w-full md:w-[140px] xl:w-[180px]"
       >
         <div className="relative flex items-center justify-center h-24 xl:h-32">
           <span className="nav-icon icon-cd text-4xl xl:text-6xl text-primary"></span>
-          <div className="-bottom-4 h-8 flex flex-row px-4 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
+          <div className="-bottom-4 h-8 flex flex-row px-2 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
             <h1 className="text-white mr-2 md:mr-0 md:text-primary text-base sm:text-xl md:text-3xl xl:text-4xl font-medium">
               260
             </h1>
@@ -38,7 +38,7 @@ const Navbar = () => {
       >
         <div className="relative flex items-center justify-center h-24 xl:h-32">
           <span className="nav-icon icon-gaming-system text-4xl xl:text-6xl text-primary"></span>
-          <div className="-bottom-4 h-8 flex flex-row px-4 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
+          <div className="-bottom-4 h-8 flex flex-row px-2 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
             <h1 className="text-white mr-2 md:mr-0 md:text-primary text-base sm:text-xl md:text-3xl xl:text-4xl font-medium">
               260
             </h1>
@@ -57,7 +57,7 @@ const Navbar = () => {
       >
         <div className="relative flex items-center justify-center h-24 xl:h-32">
           <span className="nav-icon icon-hard-disc text-4xl xl:text-6xl text-primary"></span>
-          <div className="-bottom-4 h-8 flex flex-row px-4 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
+          <div className="-bottom-4 h-8 flex flex-row px-2 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
             <h1 className="text-white mr-2 md:mr-0 md:text-primary text-base sm:text-xl md:text-3xl xl:text-4xl font-medium">
               260
             </h1>
@@ -76,7 +76,7 @@ const Navbar = () => {
       >
         <div className="relative flex items-center justify-center h-24 xl:h-32">
           <span className="nav-icon icon-joystick text-4xl xl:text-6xl text-primary"></span>
-          <div className="-bottom-4 h-8 flex flex-row px-4 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
+          <div className="-bottom-4 h-8 flex flex-row px-2 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
             <h1 className="text-white mr-2 md:mr-0 md:text-primary text-base sm:text-xl md:text-3xl xl:text-4xl font-medium">
               260
             </h1>
@@ -95,7 +95,7 @@ const Navbar = () => {
       >
         <div className="relative flex items-center justify-center h-24 xl:h-32">
           <span className="nav-icon icon-woofer text-4xl xl:text-6xl text-primary"></span>
-          <div className="-bottom-4 h-8 flex flex-row px-4 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
+          <div className="-bottom-4 h-8 flex flex-row px-2 bg-primary rounded md:bottom-auto md-h-auto md:px-0 md:bg-transparent md:rounded-none absolute ml-0 nav-text md:block md:flex-col items-center justify-center">
             <h1 className="text-white mr-2 md:mr-0 md:text-primary text-base sm:text-xl md:text-3xl xl:text-4xl font-medium">
               260
             </h1>

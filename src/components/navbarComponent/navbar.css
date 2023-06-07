@@ -14,7 +14,7 @@
   @apply flex items-center font-medium border-none bg-transparent cursor-pointer w-full;
 }
 
-button span {
+.menu-items button span {
   @apply ml-1;
 }
 
