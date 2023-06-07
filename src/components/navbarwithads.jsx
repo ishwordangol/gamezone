@@ -15,7 +15,7 @@ const Navbar = () => {
     >
       <Link
         to="/gamezone/category-product-listing"
-        className="p-0 bg-gray-100 justify-between inline-block md:border-r w-full md:w-[140px] xl:w-[180px]"
+        className="p-0 bg-white justify-between inline-block md:border-r w-full md:w-[140px] xl:w-[180px]"
       >
         <div className="relative flex items-center justify-center h-24 xl:h-32">
           <span className="nav-icon icon-cd text-4xl xl:text-6xl text-primary"></span>
