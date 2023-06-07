@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/gamezone/static/css/main.eca95ca2.css",
-    "main.js": "/gamezone/static/js/main.1cb6f66b.js",
+    "main.css": "/gamezone/static/css/main.0b75168d.css",
+    "main.js": "/gamezone/static/js/main.bfeac0d3.js",
     "static/media/slick.svg": "/gamezone/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/gamezone/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/gamezone/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/gamezone/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/gamezone/index.html",
-    "main.eca95ca2.css.map": "/gamezone/static/css/main.eca95ca2.css.map",
-    "main.1cb6f66b.js.map": "/gamezone/static/js/main.1cb6f66b.js.map"
+    "main.0b75168d.css.map": "/gamezone/static/css/main.0b75168d.css.map",
+    "main.bfeac0d3.js.map": "/gamezone/static/js/main.bfeac0d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.eca95ca2.css",
-    "static/js/main.1cb6f66b.js"
+    "static/css/main.0b75168d.css",
+    "static/js/main.bfeac0d3.js"
   ]
 }
