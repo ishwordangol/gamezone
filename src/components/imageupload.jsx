@@ -51,7 +51,7 @@ function Imageupload({ className, label }) {
 
       {/* preview section */}
 
-      <ul className="mt-4 grid grid-cols-4 gap-2">
+      <ul className="mt-4 flex flex-wrap gap-2">
         {files.map((file) => (
           <li
             key={file.name}

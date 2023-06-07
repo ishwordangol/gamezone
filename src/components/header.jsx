@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Mainmenu from "../components/mainmenu";
+import Mainmenu from "../components/navbarComponent/NavbarMain";
 
 export default function Header() {
   const [scroll, setScroll] = useState(false);
@@ -70,7 +70,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block headerbottom py-2 border-t border-b bg-white">
+      <div className="hidden lg:block headerbottom border-t border-b bg-white">
         <div className="container">
           <div>
             <Mainmenu />
