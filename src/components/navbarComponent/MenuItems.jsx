@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
+import { HiChevronDown, HiChevronDoubleRight } from "react-icons/hi";
 
 const MenuItems = ({ items, depthLevel }) => {
   let ref = useRef();
@@ -44,7 +45,11 @@ const MenuItems = ({ items, depthLevel }) => {
             onClick={() => setDropdown((prev) => !prev)}
           >
             {items.name}{" "}
-            {depthLevel > 0 ? <span>&raquo;</span> : <span className="arrow" />}
+            {depthLevel > 0 ? (
+              <HiChevronDoubleRight className="text-xs" />
+            ) : (
+              <HiChevronDown className="text-base" />
+            )}
           </button>
           <Dropdown
             depthLevel={depthLevel}

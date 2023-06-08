@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from '../components/header';
@@ -12,6 +12,7 @@ import Nav from '../components/navbarwithads';
 
 
 export default function Home() {
+  const [scroll, setScroll] = useState(false);
   useEffect(() => {
     document.title = 'Homepage';
     window.scrollTo(0, 0);
@@ -19,11 +20,17 @@ export default function Home() {
       offset: 120,
       duration: 1200,
     });
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
   }, []);
   return (
     <>
       <div className='homepageWrapper'>
-        <Header />
+        <Header homepage={scroll
+          ? "bg-secondary animate__animated animate__fadeInDown fixed top-0"
+          : "relative"
+        } headerbottom="hidden" />
         <section>
           <div className='relative'>
             <img src="/gamezone/assets/images/sliderbanner/banner1.jpg" alt="Banner 1" className='main-banner h-[80vh] md:h-[768px] w-full object-cover' />

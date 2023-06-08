@@ -33,16 +33,6 @@
   @apply text-primary;
 }
 
-.arrow::after {
-  content: "";
-  display: inline-block;
-  margin-left: 0.28em;
-  vertical-align: 0.09em;
-  border-top: 0.42em solid;
-  border-right: 0.32em solid transparent;
-  border-left: 0.32em solid transparent;
-}
-
 .dropdown {
   @apply absolute right-0 left-auto text-sm z-50 min-w-[10rem] py-2 px-0 list-none bg-white border hidden;
 }
@@ -66,5 +56,32 @@
   .menus > .menu-items > a,
   .menus > .menu-items > button {
     @apply mr-8;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menus {
+    @apply grid grid-cols-1 gap-2;
+  }
+  .menu-items {
+    @apply w-full;
+  }
+
+  .menus > .menu-items > a,
+  .menus > .menu-items > button {
+    @apply w-full mr-0 bg-gray-100 px-4 rounded-lg justify-between;
+  }
+
+  .menu-items a:hover,
+  .menu-items button:hover {
+    @apply text-black;
+  }
+
+  .menus .dropdown {
+    @apply relative border-none p-0 ml-4;
+  }
+
+  .dropdown .dropdown-submenu {
+    @apply left-0 top-0 ml-4;
   }
 }

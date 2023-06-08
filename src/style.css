@@ -124,19 +124,8 @@ input[type="checkbox"]:before {
 
 /* header homepage */
 
-.homepageWrapper .header_wrapper,
-.categoryWrapper .header_wrapper {
-  position: fixed;
-  top: 0;
-}
-
 .homepageWrapper .header_wrapper .headerbottom {
   display: none;
-}
-
-.ProductdetailWrapper .header_wrapper {
-  position: relative;
-  animation-name: none;
 }
 
 /* slick slider */

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Mainmenu from "../components/navbarComponent/NavbarMain";
 
-export default function Header() {
+export default function Header({ homepage }) {
   const [scroll, setScroll] = useState(false);
   const navigate = useNavigate();
 
@@ -17,13 +17,7 @@ export default function Header() {
     });
   }, []);
   return (
-    <header
-      className={` header_wrapper w-full z-50 ${
-        scroll
-          ? "bg-secondary animate__animated animate__fadeInDown fixed top-0"
-          : "relative"
-      }`}
-    >
+    <header className={` header_wrapper w-full z-50 ${homepage}`}>
       <div className={scroll ? "pt-3 pb-3.5" : "py-1.5"}>
         <div className="container">
           <div className="flex justify-between items-center">
