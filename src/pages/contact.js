@@ -29,7 +29,7 @@ export const Contact = () => {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-1 lg:grid-cols-5 gap-8 bg-white'>
+                    <div className='grid grid-cols-1 lg:grid-cols-5 lg:gap-8 bg-white'>
                         <div className='col-span-full lg:col-span-2'>
                             {/* <div className='w-full p-4 bg-white flex items-center'>
                                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primarylight mr-4">
