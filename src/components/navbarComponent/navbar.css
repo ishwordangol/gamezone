@@ -84,4 +84,14 @@
   .dropdown .dropdown-submenu {
     @apply left-0 top-0 ml-4;
   }
+
+  .dropdown .menu-items a,
+  .dropdown .menu-items button {
+    padding-left: 0;
+  }
+
+  ul.dropdown.show {
+    list-style-type: square;
+    padding-left: 32px;
+  }
 }

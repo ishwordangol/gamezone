@@ -29,9 +29,9 @@ export const Contact = () => {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-1 lg:grid-cols-5 gap-8'>
-                        <div className='col-span-full lg:col-span-2 flex flex-col gap-4 items-start'>
-                            <div className='w-full p-4 bg-white flex items-center'>
+                    <div className='grid grid-cols-1 lg:grid-cols-5 gap-8 bg-white'>
+                        <div className='col-span-full lg:col-span-2'>
+                            {/* <div className='w-full p-4 bg-white flex items-center'>
                                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primarylight mr-4">
                                     <RiPhoneLine className='text-2xl text-primary' />
                                 </div>
@@ -57,9 +57,11 @@ export const Contact = () => {
                                     <h4 className='text-lg font-semibold block'>Location</h4>
                                     <span className='font-semibold block'>Uptown, Mirdif</span>
                                 </div>
-                            </div>
+                            </div> */}
+
+                            <img src="/gamezone/assets/contact.jpg" alt="Contact" />
                         </div>
-                        <div className='col-span-full lg:col-span-3 bg-white p-8'>
+                        <div className='col-span-full lg:col-span-3 p-8'>
                             <h3 className='text-2xl font-semibold mb-2 block'>Send Message</h3>
                             <p>Any Questions or remarks? Just write us a message!</p>
                             <div className='mt-8 ContactformWrapper grid grid-cols-1 sm:grid-cols-2 gap-4'>
@@ -97,7 +99,7 @@ export const Contact = () => {
                     </div>
                 </div>
             </section>
-            <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>
+            {/* <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>
                 <div className='title text-center mb-4 lg:mb-8' data-aos="fade-down">
                     <h1 className='text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-secondary'>Find us on <span className='text-stroke text-stroke-gray'> Google Map</span></h1>
                     <h3 className='text-base md:text-lg font-extralight'>Our office location</h3>
@@ -105,7 +107,7 @@ export const Contact = () => {
                 <div className='container'>
                     <iframe title="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.4576525415114!2d55.41825968721148!3d25.221506173218536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f61b620a3e0bd%3A0x67f5ee00e1401025!2sUptown%20Mirdif%20Villas!5e0!3m2!1sen!2snp!4v1686039889857!5m2!1sen!2snp" width="100%" height="300" allowFullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" className='rounded grayscale'></iframe>
                 </div>
-            </section>
+            </section> */}
             <Footer />
         </>
     )

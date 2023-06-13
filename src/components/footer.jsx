@@ -12,8 +12,17 @@ import {
   RiNotification2Fill,
   RiUserFill,
 } from "react-icons/ri";
+import Drawer from "react-modern-drawer";
+import "react-modern-drawer/dist/index.css";
+import Mainmenu from "../components/navbarComponent/NavbarMain";
+import useWindowDimensions from "./Windowsdimension";
 
-const footer = () => {
+const Footer = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const toggleDrawer = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+  const { screenwidth } = useWindowDimensions();
   return (
     <footer>
       <div className="pt-5 pb-4 sm:pt-10 sm:pb-8 lg:pt-20 lg:pb-16">
@@ -254,7 +263,10 @@ const footer = () => {
               <span className="text-center inline-block text-xs">Home</span>
             </Link>
 
-            <Link to="#" className="flex justify-center flex-col gap-1">
+            <Link
+              to="/gamezone/maincategorylist"
+              className="flex justify-center flex-col gap-1"
+            >
               <span className="flex justify-center">
                 <RiLayoutGridFill className="inline-block text-2xl text-secondary" />
               </span>
@@ -262,6 +274,19 @@ const footer = () => {
                 Categories
               </span>
             </Link>
+
+            {/* <button
+              type="button"
+              onClick={toggleDrawer}
+              className="flex justify-center flex-col gap-1"
+            >
+              <span className="w-full flex justify-center">
+                <RiLayoutGridFill className="inline-block text-2xl text-secondary" />
+              </span>
+              <span className="w-full flex justify-center text-center text-xs">
+                Categories
+              </span>
+            </button> */}
 
             <Link to="#" className="flex justify-center flex-col gap-1">
               <span className="flex justify-center">
@@ -281,8 +306,21 @@ const footer = () => {
           </div>
         </div>
       </div>
+      {screenwidth < 1024 && (
+        <Drawer
+          open={isOpen}
+          onClose={toggleDrawer}
+          direction="right"
+          className="drawerRight p-8"
+        >
+          <h3 className="text-xl font-semibold mb-2 block">Categories</h3>
+          <div>
+            <Mainmenu />
+          </div>
+        </Drawer>
+      )}
     </footer>
   );
 };
 
-export default footer;
+export default Footer;

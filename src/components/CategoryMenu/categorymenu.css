@@ -1,0 +1,15 @@
+/* .mainWrapper > div {
+  position: relative;
+}
+
+.categorychild {
+  position: absolute;
+}
+
+.categorychild > div {
+  @apply mt-2;
+}
+
+.categorychild-submenu {
+  position: relative;
+} */

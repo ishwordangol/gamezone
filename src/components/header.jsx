@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Mainmenu from "../components/navbarComponent/NavbarMain";
+import useWindowDimensions from "./Windowsdimension";
 
 export default function Header({ homepage }) {
   const [scroll, setScroll] = useState(false);
@@ -16,6 +17,8 @@ export default function Header({ homepage }) {
       setScroll(window.scrollY > 50);
     });
   }, []);
+
+  const { screenwidth } = useWindowDimensions();
   return (
     <header className={` header_wrapper w-full z-50 ${homepage}`}>
       <div className={scroll ? "pt-3 pb-3.5" : "py-1.5"}>
@@ -64,13 +67,15 @@ export default function Header({ homepage }) {
           </div>
         </div>
       </div>
-      <div className="hidden lg:block headerbottom border-t border-b bg-white">
-        <div className="container">
-          <div>
-            <Mainmenu />
+      {screenwidth > 1024 && (
+        <div className="headerbottom border-t border-b bg-white">
+          <div className="container">
+            <div>
+              <Mainmenu />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }
