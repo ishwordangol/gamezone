@@ -82,7 +82,7 @@ export const Productdetail = () => {
         const element = document.getElementById('messageBox');
         if (element) {
             const elementPosition = element.getBoundingClientRect().top;
-            const offset = 100; // Offset in pixels from the top
+            const offset = 110; // Offset in pixels from the top
 
             // Calculate the scroll position
             const scrollPosition = elementPosition + window.pageYOffset - offset;
