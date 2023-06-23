@@ -118,7 +118,7 @@ export const Productdetail = () => {
                     <div className="container">
                         <div
                             className={` flex items-center justify-between ${scroll
-                                ? "bg-gray-50 z-[45] sticky top-0 py-2 pr-4"
+                                ? "bg-gray-50 z-[45] sticky top-0 py-2 px-4"
                                 : ""
                                 }`}>
                             <div className="w-full">
@@ -159,7 +159,7 @@ export const Productdetail = () => {
                                             </WhatsappShareButton>
                                         </div>
                                     ) : (
-                                        <div className="w-full sm:w-auto flex items-center gap-2">
+                                        <div className="mt-2 w-full sm:w-auto flex items-center gap-2">
                                             <button className="border border-primary text-primary hover:bg-primary hover:text-white py-1 px-4 rounded-lg transition duration-500 ease-in-out">
                                                 Call
                                             </button>
@@ -176,33 +176,7 @@ export const Productdetail = () => {
                             </div>
 
                         </div>
-                        {screenwidth < 1024 && (
-                            <div className="bg-white p-4 mt-4"><h4 className="text-lg font-semibold mb-4 block text-secondary">Contact Detail</h4>
-                                <div className="mt-4 flex">
-                                    <Link to="#">
-                                        <img src="/gamezone/assets/images/users/ishwor.jpg" alt="User" className='w-20 h-20 object-cover rounded-full mr-4' />
-                                    </Link>
-                                    <div className="userdetail flex-1">
-                                        <Link to="#" className="hover:text-primary">
-                                            <h4 className="font-semibold">Ishwor Dangol</h4>
-                                        </Link>
-                                        {isOpen &&
-                                            <Link to="tel:+561 12 345 7" className="flex items-center text-sm hover:underline"><BiPhoneCall className="mr-2" />+561 12 345 7</Link>
-                                        }
-                                        <div className={` flex items-center text-sm ${isOpen
-                                            ? "hidden"
-                                            : ""
-                                            }`}
-                                        >
-                                            <BiPhoneCall className="mr-2" />
-                                            <span className="mr-2">+561 12 *** *</span>
-                                            <button className="px-2 py-0.5 bg-secondary hover:bg-primary text-white" onClick={() => setIsOpen(!isOpen)}>Show</button>
-                                        </div>
-                                        <Link to="#" className="flex items-center text-sm hover:underline"><BiMap className="mr-2" />Uptown, Mirdif</Link>
 
-                                    </div>
-                                </div></div>
-                        )}
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 mt-4">
                             <div className="col-span-full lg:col-span-2">
                                 <div className="relative">
