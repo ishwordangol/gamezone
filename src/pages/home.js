@@ -5,7 +5,8 @@ import Header from '../components/header';
 import { TypeAnimation } from 'react-type-animation';
 import Footer from '../components/footer';
 import Search from "../components/search";
-import Featured from '../components/productlistslider';
+import Featured from '../components/productlistgrid';
+import Popular from '../components/productlistslider';
 import featuredslides from '../data/featuredproductdata.json';
 import Brand from '../components/brandlist';
 import Nav from '../components/navbarwithads';
@@ -90,7 +91,14 @@ export default function Home() {
             <h3 className='text-base md:text-lg font-extralight'>Buy & Sell Anything</h3>
           </div>
           <div className='container'>
-            <Featured productdata={featuredslides} />
+            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              <Featured productdata={featuredslides} />
+            </div>
+            <div className="mt-4 sm:mt-7 lg:mt-14 flex justify-center">
+              <button className="btn btn-primary transition duration-500 ease-in-out">
+                View all listing
+              </button>
+            </div>
           </div>
         </section>
         <section className='py-4 sm:py-7 lg:py-14'>
@@ -99,7 +107,7 @@ export default function Home() {
             <h3 className='text-base md:text-lg font-extralight'>Buy & Sell Anything</h3>
           </div>
           <div className='container'>
-            <Featured productdata={featuredslides} />
+            <Popular productdata={featuredslides} />
           </div>
         </section>
         <section className='py-4 sm:py-7 lg:py-14 bg-gray-50'>

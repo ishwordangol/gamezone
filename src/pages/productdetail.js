@@ -20,6 +20,7 @@ import {
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 import { SiSony } from "react-icons/si";
 import { BiMap, BiPhoneCall } from "react-icons/bi";
+import useWindowDimensions from "../components/Windowsdimension";
 
 export const Productdetail = () => {
 
@@ -69,11 +70,27 @@ export const Productdetail = () => {
         },
     ];
 
+    const { screenwidth } = useWindowDimensions();
+
     const [isOpen, setIsOpen] = useState(false);
     const [scroll, setScroll] = useState(false);
     // const refContainer = useRef();
     // const [dimensions, setDimensions] =
     //     useState({ height: 0 });
+
+    const handleClickScroll = () => {
+        const element = document.getElementById('messageBox');
+        if (element) {
+            const elementPosition = element.getBoundingClientRect().top;
+            const offset = 100; // Offset in pixels from the top
+
+            // Calculate the scroll position
+            const scrollPosition = elementPosition + window.pageYOffset - offset;
+
+            // Scroll to the calculated position
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -121,30 +138,71 @@ export const Productdetail = () => {
                                         <span className="px-4 text-gray-300">|</span>
                                         <span className="text-sm">added 2 days ago</span>
                                     </div>
-                                    <div className="w-full sm:w-auto flex items-center">
-                                        <span className="mr-2 text-sm">Share:</span>
-                                        <FacebookShareButton url={"https://www.facebook.com"}>
-                                            <FacebookIcon size={32} round className="mr-1" />
-                                        </FacebookShareButton>
-                                        <TwitterShareButton url={"https://www.twitter.com"}>
-                                            <TwitterIcon
-                                                size={32}
-                                                round={true}
-                                                className="mr-1"
-                                            />
-                                        </TwitterShareButton>
-                                        <LinkedinShareButton url={"https://www.linkedin.com"}>
-                                            <LinkedinIcon size={32} round={true} className="mr-1" />
-                                        </LinkedinShareButton>
-                                        <WhatsappShareButton url={"https://www.whatsapp.com"}>
-                                            <WhatsappIcon size={32} round={true} />
-                                        </WhatsappShareButton>
-                                    </div>
+                                    {screenwidth > 1024 ? (
+                                        <div className="w-full sm:w-auto flex items-center">
+                                            <span className="mr-2 text-sm">Share:</span>
+                                            <FacebookShareButton url={"https://www.facebook.com"}>
+                                                <FacebookIcon size={32} round className="mr-1" />
+                                            </FacebookShareButton>
+                                            <TwitterShareButton url={"https://www.twitter.com"}>
+                                                <TwitterIcon
+                                                    size={32}
+                                                    round={true}
+                                                    className="mr-1"
+                                                />
+                                            </TwitterShareButton>
+                                            <LinkedinShareButton url={"https://www.linkedin.com"}>
+                                                <LinkedinIcon size={32} round={true} className="mr-1" />
+                                            </LinkedinShareButton>
+                                            <WhatsappShareButton url={"https://www.whatsapp.com"}>
+                                                <WhatsappIcon size={32} round={true} />
+                                            </WhatsappShareButton>
+                                        </div>
+                                    ) : (
+                                        <div className="w-full sm:w-auto flex items-center gap-2">
+                                            <button className="border border-primary text-primary hover:bg-primary hover:text-white py-1 px-4 rounded-lg transition duration-500 ease-in-out">
+                                                Call
+                                            </button>
+                                            <button className="border border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white py-1 px-4 rounded-lg transition duration-500 ease-in-out">
+                                                WhatsApp
+                                            </button>
+                                            <button className="border border-secondary text-secondary hover:bg-secondary hover:text-white py-1 px-4 rounded-lg transition duration-500 ease-in-out" onClick={handleClickScroll}>
+                                                Message
+                                            </button>
+                                        </div>
+                                    )}
 
                                 </div>
                             </div>
 
                         </div>
+                        {screenwidth < 1024 && (
+                            <div className="bg-white p-4 mt-4"><h4 className="text-lg font-semibold mb-4 block text-secondary">Contact Detail</h4>
+                                <div className="mt-4 flex">
+                                    <Link to="#">
+                                        <img src="/gamezone/assets/images/users/ishwor.jpg" alt="User" className='w-20 h-20 object-cover rounded-full mr-4' />
+                                    </Link>
+                                    <div className="userdetail flex-1">
+                                        <Link to="#" className="hover:text-primary">
+                                            <h4 className="font-semibold">Ishwor Dangol</h4>
+                                        </Link>
+                                        {isOpen &&
+                                            <Link to="tel:+561 12 345 7" className="flex items-center text-sm hover:underline"><BiPhoneCall className="mr-2" />+561 12 345 7</Link>
+                                        }
+                                        <div className={` flex items-center text-sm ${isOpen
+                                            ? "hidden"
+                                            : ""
+                                            }`}
+                                        >
+                                            <BiPhoneCall className="mr-2" />
+                                            <span className="mr-2">+561 12 *** *</span>
+                                            <button className="px-2 py-0.5 bg-secondary hover:bg-primary text-white" onClick={() => setIsOpen(!isOpen)}>Show</button>
+                                        </div>
+                                        <Link to="#" className="flex items-center text-sm hover:underline"><BiMap className="mr-2" />Uptown, Mirdif</Link>
+
+                                    </div>
+                                </div></div>
+                        )}
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 mt-4">
                             <div className="col-span-full lg:col-span-2">
                                 <div className="relative">
@@ -310,6 +368,27 @@ export const Productdetail = () => {
                                         </div>
                                     </div>
                                 </div>
+                                {screenwidth < 1024 && (
+                                    <div className="mt-4 bg-white p-4 w-full sm:w-auto flex items-center">
+                                        <span className="mr-2 text-sm">Share:</span>
+                                        <FacebookShareButton url={"https://www.facebook.com"}>
+                                            <FacebookIcon size={32} round className="mr-1" />
+                                        </FacebookShareButton>
+                                        <TwitterShareButton url={"https://www.twitter.com"}>
+                                            <TwitterIcon
+                                                size={32}
+                                                round={true}
+                                                className="mr-1"
+                                            />
+                                        </TwitterShareButton>
+                                        <LinkedinShareButton url={"https://www.linkedin.com"}>
+                                            <LinkedinIcon size={32} round={true} className="mr-1" />
+                                        </LinkedinShareButton>
+                                        <WhatsappShareButton url={"https://www.whatsapp.com"}>
+                                            <WhatsappIcon size={32} round={true} />
+                                        </WhatsappShareButton>
+                                    </div>
+                                )}
 
                                 <div className="youtube-video mt-4 bg-white p-4">
                                     <h4 className="text-lg font-semibold mb-2 block text-secondary">Video</h4>
@@ -326,7 +405,7 @@ export const Productdetail = () => {
                                         <Link to="#">
                                             <img src="/gamezone/assets/images/users/ishwor.jpg" alt="User" className='w-20 h-20 object-cover rounded-full mr-4' />
                                         </Link>
-                                        <div className="userdetail">
+                                        <div className="userdetail flex-1">
                                             <Link to="#" className="hover:text-primary">
                                                 <h4 className="font-semibold">Ishwor Dangol</h4>
                                             </Link>
@@ -344,9 +423,12 @@ export const Productdetail = () => {
                                             </div>
                                             {/* <Link to="mailto:info@gamezone.com" className="inline-flex items-center text-sm"><BiMailSend className="mr-2" />info@gamezone.com</Link> */}
                                             <Link to="#" className="flex items-center text-sm hover:underline"><BiMap className="mr-2" />Uptown, Mirdif</Link>
+                                            <button className="mt-4 w-full border border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white py-1 px-4 rounded-lg transition duration-500 ease-in-out">
+                                                WhatsApp
+                                            </button>
                                         </div>
                                     </div>
-                                    <div className='mt-4'>
+                                    <div id="messageBox" className='mt-4'>
                                         <label className='font-semibold mb-2 block'>Name</label>
                                         <div><input type="text" id="name" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
 
@@ -363,13 +445,13 @@ export const Productdetail = () => {
                                 </div> */}
                                     <div className='mt-4'>
                                         <label className='font-semibold mb-2 block'>Phone</label>
-                                        <div><input type="number" id="phone" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
+                                        <div><input type="number" id="phone" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Phone" required /></div>
 
                                     </div>
 
                                     <div className='mt-4'>
                                         <label className='font-semibold mb-2 block'>Message</label>
-                                        <div><textarea id="message" rows="8" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Enter Your Name" required /></div>
+                                        <div><textarea id="message" rows="8" className="bg-gray-100 text-sm text-gray-700 rounded-lg block w-full p-2.5 outline-none" placeholder="Hello, saw your ad on Gamezone, I'm interested in this item.Is this item still available? Thanks" required /></div>
 
                                     </div>
 
@@ -377,9 +459,7 @@ export const Productdetail = () => {
                                         Send Message
                                     </button>
 
-                                    <button className="mt-4 w-full border border-whatsapp text-whatsapp hover:bg-whatsapp hover:text-white py-2 px-6 rounded-lg transition duration-500 ease-in-out">
-                                        WhatsApp
-                                    </button>
+
                                 </div>
                                 <div className="mt-4 bg-white p-4">
                                     <h4 className="text-lg font-semibold mb-4 block text-secondary">Featured Products</h4>

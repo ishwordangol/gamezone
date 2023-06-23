@@ -114,7 +114,14 @@ export const CategoryProductlisting = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ProductGrid productdata={categorylistingproduct} />
+                            <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+                                <ProductGrid productdata={categorylistingproduct} />
+                            </div>
+                            <div className="mt-4 sm:mt-7 lg:mt-14 flex justify-center">
+                                <button className="btn btn-primary transition duration-500 ease-in-out">
+                                    Load More
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
