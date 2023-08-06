@@ -40,7 +40,7 @@ const InnerpageSearch = () => {
                   placeholder="All Categories"
                 />
               </div>
-              <div className="flex-1 flex items-center searchdropdown relative">
+              <div className="flex-1 flex items-center searchdropdown relative whitespace-nowrap">
                 <ReactSelect options={areas} placeholder="Select Areas" />
               </div>
             </div>
