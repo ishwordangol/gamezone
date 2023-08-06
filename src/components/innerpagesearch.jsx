@@ -1,6 +1,7 @@
 import React from "react";
 import ReactSelect from "../components/Reactselect";
 import { RiAlignLeft } from "react-icons/ri";
+import useWindowDimensions from "./Windowsdimension";
 
 const InnerpageSearch = () => {
   const categories = [
@@ -24,50 +25,104 @@ const InnerpageSearch = () => {
     { value: "Umm Al Quwain", label: "Umm Al Quwain" },
     { value: "Al Ain", label: "Al Ain" },
   ];
+
+  const { screenwidth } = useWindowDimensions();
   return (
     <>
-      <div className="srchshadow block w-full py-1 px-1.5 border border-gray-300 rounded-lg bg-white">
-        <div className="flex flex-wrap gap-1 lg:gap-0 items-center">
-          <div className="w-full lg:w-auto flex items-center searchdropdown relative lg:border-r">
-            <RiAlignLeft className="hidden lg:block absolute left-1.5 top-1/2 -translate-y-1/2 text-2xl" />
-            <ReactSelect options={categories} placeholder="All Categories" />
-          </div>
+      {screenwidth < 1024 ? (
+        <div className="srchshadow block w-full py-1 px-1.5 border border-gray-300 rounded-lg bg-white">
+          <div className="flex flex-wrap gap-1 lg:gap-0 items-center">
+            <div className="flex w-full bg-gray-100 p-2 rounded-lg">
+              <div className="w-3/5 flex items-center searchdropdown relative border-r">
+                <RiAlignLeft className="z-20 block absolute left-1.5 top-1/2 -translate-y-1/2 text-2xl" />
+                <ReactSelect
+                  options={categories}
+                  placeholder="All Categories"
+                />
+              </div>
+              <div className="flex-1 flex items-center searchdropdown relative">
+                <ReactSelect options={areas} placeholder="Select Areas" />
+              </div>
+            </div>
+            <div className="flex w-full bg-gray-100 p-2 rounded-lg">
+              <div className="w-4/5 rounded-lg lg:rounded-none border-r">
+                <input
+                  type="search"
+                  id="search"
+                  className="rounded-lg lg:rounded-none bg-gray-100 lg:bg-transparent w-full py-2 px-8 text-sm text-black outline-none placeholder-black"
+                  placeholder="Search anything.."
+                  required
+                />
+              </div>
 
-          <div className="w-full lg:w-auto flex-1 rounded-lg lg:rounded-none lg:border-r">
-            <input
-              type="search"
-              id="search"
-              className="rounded-lg lg:rounded-none bg-gray-100 lg:bg-transparent w-full py-2 px-8 text-sm text-black outline-none placeholder-black"
-              placeholder="Search anything.."
-              required
-            />
+              <button
+                type="submit"
+                className="flex-1 justify-center lg:mt-0 lg:justify-normal flex items-center text-white btn btn-primary text-sm px-4 py-2 transition duration-500 ease-in-out"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+                <span>Search</span>
+              </button>
+            </div>
           </div>
-          <div className="w-full lg:w-auto flex items-center searchdropdown relative lg:mr-8">
-            <ReactSelect options={areas} placeholder="Select Areas" />
-          </div>
-          <button
-            type="submit"
-            className="mt-1 w-full lg:w-auto justify-center lg:mt-0 lg:justify-normal flex items-center text-white btn btn-primary text-sm px-4 py-2 transition duration-500 ease-in-out"
-          >
-            <svg
-              aria-hidden="true"
-              className="w-5 h-5 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              ></path>
-            </svg>
-            <span>Search</span>
-          </button>
         </div>
-      </div>
+      ) : (
+        <div className="srchshadow block w-full py-1 px-1.5 border border-gray-300 rounded-lg bg-white">
+          <div className="flex flex-wrap gap-1 lg:gap-0 items-center">
+            <div className="w-full lg:w-auto flex items-center searchdropdown relative lg:border-r">
+              <RiAlignLeft className="z-20 block absolute left-1.5 top-1/2 -translate-y-1/2 text-2xl" />
+              <ReactSelect options={categories} placeholder="All Categories" />
+            </div>
+
+            <div className="w-full lg:w-auto flex-1 rounded-lg lg:rounded-none lg:border-r">
+              <input
+                type="search"
+                id="search"
+                className="rounded-lg lg:rounded-none bg-gray-100 lg:bg-transparent w-full py-2 px-8 text-sm text-black outline-none placeholder-black"
+                placeholder="Search anything.."
+                required
+              />
+            </div>
+            <div className="w-full lg:w-auto flex items-center searchdropdown relative lg:mr-8">
+              <ReactSelect options={areas} placeholder="Select Areas" />
+            </div>
+            <button
+              type="submit"
+              className="mt-1 w-full lg:w-auto justify-center lg:mt-0 lg:justify-normal flex items-center text-white btn btn-primary text-sm px-4 py-2 transition duration-500 ease-in-out"
+            >
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
